@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  .login-container {
+    display: flex;
+    align-items: center;
+    height: 110vh;
+    width:900;
+    
+    
+
+  }
+  
+  .login-card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 15px; /* Adjust the border-radius for rounded edges */
+    padding: 20px; /* Add padding to the card */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    margin-left: 350px;
+    margin-top: -200px;
+  }
+  
+  .login-heading {
+    margin-left:180px;
+    font-size: 30px;
+    color: #007ACC; /* Blue font color */
+  }
+  
+  .input2-container {
+    margin-left: 500px; /* Adjust the margin-left to increase the width */
+    margin-top: -186px;
+  }
+  
+  .normal-input input {
+    width: 50%; /* Textboxes take 100% of the parent width */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-top: 5px;
+  }
+
+  .input1-container
+  {
+    margin-left:90px;
+    width:300px;
+  }
+
+  
+  label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  input {
+    width: 10%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Rounded textboxes */
+    margin-top: 5px;
+  }
+  
+  button {
+    background-color: #007ACC;
+    color: #fff;
+    border: none;
+    border-radius: 20px; /* Rounded button */
+    padding: 14px 259px;;
+    cursor: pointer;
+    margin-left:89px;
+  }
+  
+  button:hover {
+    background-color: #005999;
+  }
+  
