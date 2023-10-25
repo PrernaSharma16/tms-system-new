@@ -1,0 +1,66 @@
+<div class="login-container">
+    <div class="login-card">
+      <h1 class="login-heading">Create Account for Teacher</h1>
+      <form [formGroup]="createForm" >
+        <div class="input-container">
+          <div class="row">
+            <div class="col">
+              <div class="form-group">
+                <input type="text" id="firstname" formControlName="firstname" class="form-control" placeholder="First Name">&nbsp;&nbsp;
+                <div class="text-danger" *ngIf="createForm.get('firstname').hasError('required') && createForm.get('firstname').touched">First Name is required.</div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <input type="text" id="lastname" formControlName="lastname" class="form-control" placeholder="Last Name">
+                <div class="text-danger" *ngIf="createForm.get('lastname').hasError('required') && createForm.get('lastname').touched">Last Name is required.</div>
+              </div>
+            </div>
+            
+          </div>
+  
+          <div class="row">
+            <div class="col">
+              <div class="form-group">
+                <input class="age" type="number" id="age" formControlName="age" class="form-control" placeholder="Age">
+                <div class="text-danger" *ngIf="createForm.get('age').hasError('required') && createForm.get('age').touched">Age is required.</div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <input type="text" id="gender" formControlName="gender" class="form-control" placeholder="Gender">
+                <div class="text-danger" *ngIf="createForm.get('gender').hasError('required') && createForm.get('gender').touched">Gender is required.</div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="row">
+            <div class="col">
+              <div class="form-group">
+                <input type="date" id="date" formControlName="date" class="form-control">
+                <div class="text-danger" *ngIf="createForm.get('date').hasError('required') && createForm.get('date').touched">Date of Birth is required.</div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <input type="text" id="location" placeholder="Location" formControlName="location" class="form-control">
+                <div class="text-danger" *ngIf="createForm.get('location').hasError('required') && createForm.get('location').touched">Location is required.</div>
+              </div>
+            </div>
+            
+          </div>
+          
+        </div>
+        
+  
+        <button type="submit" class="btn btn-primary">Submit</button><br><br>
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; 
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <a>Already have an account?</a><a [routerLink] = "['']">Login</a> 
+      </form>
+    </div>
+  </div>
+  
