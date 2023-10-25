@@ -1,48 +1,65 @@
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-  <div class="login-container">
-    <div class="login-card">
-      <h1 class="login-heading">Create Account for student</h1>
-      <form>
-      
-        <div class="input1-container">
-          <div class="normal-input">
+<div class="login-container">
+  <div class="login-card">
+    <h1 class="login-heading">Create Account for Student</h1>
+    <form [formGroup]="createForm" >
+      <div class="input-container">
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <input type="text" id="firstname" formControlName="firstname" class="form-control" placeholder="First Name">&nbsp;&nbsp;
+              <div class="text-danger" *ngIf="createForm.get('firstname').hasError('required') && createForm.get('firstname').touched">First Name is required.</div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <input type="text" id="lastname" formControlName="lastname" class="form-control" placeholder="Last Name">
+              <div class="text-danger" *ngIf="createForm.get('lastname').hasError('required') && createForm.get('lastname').touched">Last Name is required.</div>
+            </div>
+          </div>
+          
+        </div>
 
-            <input type="text" id="firstname" name="firstname" placeholder="Firstname"><br><br>
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <input class="age" type="number" id="age" formControlName="age" class="form-control" placeholder="Age">
+              <div class="text-danger" *ngIf="createForm.get('age').hasError('required') && createForm.get('age').touched">Age is required.</div>
+            </div>
           </div>
-          <div class="normal-input">
-            
-            <input type="number" id="age" name="age" placeholder="Age"><br><br>
-          </div>
-          <div class="normal-input">
-            
-            <input type="date" id="dob" name="dob"><br><br>
+          <div class="col">
+            <div class="form-group">
+              <input type="text" id="gender" formControlName="gender" class="form-control" placeholder="Gender">
+              <div class="text-danger" *ngIf="createForm.get('gender').hasError('required') && createForm.get('gender').touched">Gender is required.</div>
+            </div>
           </div>
         </div>
 
-      
-        <div class="input2-container">
-          <div class="normal-input">
-            
-            <input type="text" id="lastname" name="lastname" placeholder="Lastname"><br><br>
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <input type="date" id="date" formControlName="date" class="form-control">
+              <div class="text-danger" *ngIf="createForm.get('date').hasError('required') && createForm.get('date').touched">Date of Birth is required.</div>
+            </div>
           </div>
-          <div class="normal-input">
-            
-            <input type="text" id="gender" name="gender" placeholder="Gender"><br><br>
+          <div class="col">
+            <div class="form-group">
+              <input type="text" id="location" placeholder="Location" formControlName="location" class="form-control">
+              <div class="text-danger" *ngIf="createForm.get('location').hasError('required') && createForm.get('location').touched">Location is required.</div>
+            </div>
           </div>
-          <div class="normal-input">
-            
-            <input type="text" id="location" name="location" placeholder="Location"><br><br>
-          </div>
+          
         </div>
+        
+      </div>
+      
 
-        <button type="submit">Submit</button>
-      </form>
-    </div>
+      <button type="submit" class="btn btn-primary">Submit</button><br><br>
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; 
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      <a>Already have an account?</a><a [routerLink] = "['']">Login</a> 
+    </form>
   </div>
-</body>
-</html>
+</div>

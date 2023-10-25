@@ -12,7 +12,12 @@ import { MatCardModule } from '@angular/material/card';
 import { LoginFooterComponent } from './login-footer/login-footer.component';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { StudentViewComponent } from './student-view/student-view.component';
-
+import { MatGridListModule } from '@angular/material/grid-list';
+import { TeacherViewComponent } from './teacher-view/teacher-view.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ReactiveFormsModule } from '@angular/forms'; 
 
 
 @NgModule({
@@ -22,7 +27,8 @@ import { StudentViewComponent } from './student-view/student-view.component';
     LoginBodyComponent,
     LoginFooterComponent,
     CreateUserComponent,
-    StudentViewComponent
+    StudentViewComponent,
+    TeacherViewComponent
     
   ],
   imports: [
@@ -31,7 +37,11 @@ import { StudentViewComponent } from './student-view/student-view.component';
     MatToolbarModule,
     MatFormFieldModule,
     MatSelectModule,
-    MatCardModule
+    MatCardModule,
+    MatGridListModule,
+    HttpClientModule,
+    FormsModule,
+    BrowserAnimationsModule,ReactiveFormsModule
     
     
   ],

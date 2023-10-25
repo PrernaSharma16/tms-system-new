@@ -1,0 +1,83 @@
+
+
+
+.tile {
+    background: lightblue;
+    margin-right: 10px; /* Adjust the margin to control the gap between tiles */
+    
+    
+  }
+
+  .container1 {
+    background-color: #e6e1e0; /* Set the desired background color */
+    height: 60%; /* Adjust the height as needed */
+    color: #070707; /* Set the text color for better visibility */
+    padding: 10px; /* Add padding for spacing */
+    width:500px;
+    margin-top:-10px;
+    margin-left:-300px;
+  }
+
+  .container2 {
+    background-color: #e6e1e0; /* Set the desired background color */
+    height: 60%; /* Adjust the height as needed */
+    color: #070707; /* Set the text color for better visibility */
+    padding: 10px; /* Add padding for spacing */
+    width:500px;
+    margin-top:-10px;
+    margin-left:-300px;
+  }
+
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 16px;
+  }
+  
+  .table th {
+    background-color: #007ACC;
+    color: #fff;
+    text-align: left;
+    padding: 10px;
+  }
+  
+  .table th, .table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  .table .action-button {
+    background-color: #007ACC;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+  
+  .table .action-button:hover {
+    background-color: #005999;
+  }
+  
+
+  .action-button {
+    border-radius: 20px; /* Make buttons rounded */
+    margin-right: 5px;
+  }
+  
+  .action-button.mat-raised-button {
+    min-width: auto; /* Remove minimum width on raised buttons */
+  }
+  
+  /* Style the button colors */
+  .action-button[mat-raised-button][color="primary"] {
+    background-color: #007ACC;
+    color: #fff;
+  }
+  
+  .action-button[mat-raised-button][color="warn"] {
+    background-color: #FF6F61;
+    color: #fff;
+  }
