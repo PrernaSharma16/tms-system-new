@@ -3,7 +3,38 @@
     <div class="mat-grid-title-content" style="margin-top: -460px; margin-left:200px">
     Available Student
     </div>
-    <div class="container1">
+    <div class="container1"><br>
+      &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+      &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; 
+      <button mat-raised-button color="primary" [routerLink]="['/create']" class="action-button">Add student</button>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Gender</th>
+            <th>DOB</th>
+            <th>Location</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Course </td>
+            <td>Course Description </td>
+            <td>date</td>
+            <td>location</td>
+            <td>
+                <button mat-raised-button color="primary" class="action-button">Update</button>
+                <button mat-raised-button color="warn" class="action-button">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>   
     
     </div>
 </mat-grid-tile>
@@ -17,7 +48,7 @@
       &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
       &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
       &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; 
-      <button mat-raised-button color="primary" class="action-button">Add Course</button>
+      <button mat-raised-button color="primary" [routerLink]="['/student']" class="action-button">Add Course</button>
         <table class="table">
             <thead>
               <tr>
