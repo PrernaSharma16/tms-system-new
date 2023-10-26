@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { createForm } from '../create-user/create.model';
 
 @Component({
@@ -7,7 +7,7 @@ import { createForm } from '../create-user/create.model';
   templateUrl: './create-course.component.html',
   styleUrls: ['./create-course.component.css']
 })
-export class CreateUserComponent {
+export class CreateCourseComponent {
   createForm: FormGroup;
   createData: createForm;
 
@@ -24,16 +24,5 @@ export class CreateUserComponent {
 
   }
 
-  onSubmit() {
-    if (this.createForm.invalid) {
-      for (const control in this.createForm.controls) {
-        this.createForm.get(control).markAsTouched();
-      }
-    }
-  }
-
-  
-
-  
 
 }
