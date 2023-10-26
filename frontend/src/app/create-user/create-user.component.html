@@ -1,8 +1,5 @@
 <app-login-header></app-login-header>
 
-
-
-
 <div class="login-container">
   <div class="login-card">
     <h1 class="login-heading">Create Account for Student</h1>
@@ -13,7 +10,7 @@
             <div class="form-group">
               <input type="text" id="firstname" formControlName="firstname" class="form-control" placeholder="First Name">&nbsp;&nbsp;
               <div class="text-danger" *ngIf="createForm.get('firstname').hasError('required') && createForm.get('firstname').touched">First Name is required.</div>
-            </div><br>
+            </div>
           </div>
           <div class="col">
             <div class="form-group">
@@ -29,7 +26,7 @@
             <div class="form-group">
               <input class="age" type="number" id="age" formControlName="age" class="form-control" placeholder="Age">
               <div class="text-danger" *ngIf="createForm.get('age').hasError('required') && createForm.get('age').touched">Age is required.</div>
-            </div><br>
+            </div>
           </div>
           <div class="col">
             <div class="form-group">
@@ -68,8 +65,6 @@
     </form>
   </div>
 </div>
-
-
 
 
 <app-login-footer></app-login-footer>

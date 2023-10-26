@@ -18,7 +18,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
-import { CoursesComponent } from './courses/courses.component';
+
+
+
+
 
 
 
@@ -30,8 +33,7 @@ import { CoursesComponent } from './courses/courses.component';
     LoginFooterComponent,
     CreateUserComponent,
     StudentViewComponent,
-    TeacherViewComponent,
-    CoursesComponent
+    TeacherViewComponent
     
   ],
   imports: [
