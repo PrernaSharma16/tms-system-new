@@ -8,18 +8,18 @@
           <option value="teacher">Teacher</option>
         </select>
       </div>
-      <div class="input-field">
+      <div class="input-field"><br>
         <input formControlName="username" placeholder="Username" type="text">
         <div style="color:red" class="text-danger" *ngIf="loginForm.get('username').hasError('required') && loginForm.get('username').touched">
-          Username is required.
+        Username is required.
         </div>
       </div>
-      <div class="input-field">
+      <div class="input-field"><br>
         <input formControlName="password" placeholder="Password" type="password">
         <div style="color:red" class="text-danger" *ngIf="loginForm.get('password').hasError('required') && loginForm.get('password').touched">
-          Password is required.
+        Password is required.
         </div>
-      </div>
+      </div><br>
       <button type="submit" [routerLink]="['teacher']">Login</button><br><br>
     </form>
   </div>

@@ -11,6 +11,7 @@ body {
   justify-content: center;
   height: 100vh;
   margin-top: -100px;
+  position: relative;
 }
 
 .login-card {
@@ -21,6 +22,8 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 60%; /* Adjust the width as needed */
   text-align: center;
+  position: relative;
+  min-height: 400px; /* Set a minimum height to prevent it from changing */
 }
 
 .login-heading {
@@ -30,11 +33,13 @@ body {
 
 .input-container {
   margin: 20px 0;
+  position: relative;
 }
 
 .row {
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 
 .col {
@@ -42,7 +47,7 @@ body {
 }
 
 .form-group {
-  text-align: left;
+  position: relative; /* Make the form group container relative to position absolute children */
 }
 
 label {
@@ -60,6 +65,7 @@ label {
   border: 1px solid #ccc;
   border-radius: 10px;
   margin-top: 10px; /* Adjust this margin to control the spacing between input fields */
+  position: relative;
 }
 
 /* ... (remaining CSS styles) */
@@ -69,7 +75,12 @@ label {
 
 
 .text-danger {
+  display: block; /* Display error messages by default */
   color: red;
+  font-size: 14px;
+  position: absolute; /* Position error messages absolutely */
+  margin-top: 5px; /* Adjust the margin to position the error message where you want */
+  margin-left:12px;
 }
 
 button {

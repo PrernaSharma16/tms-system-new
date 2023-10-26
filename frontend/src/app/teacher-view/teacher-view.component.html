@@ -1,15 +1,18 @@
-<mat-grid-list cols="2" rowHeight="560px">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+
+
+
+<mat-grid-list  cols="2" rowHeight="560px">
     <mat-grid-tile class="tile">
-    <div class="mat-grid-title-content" style="margin-top: -460px; margin-left:200px">
+    <div class="mat-grid-title-content" style="margin-top: -460px; color: red; font-size: 23px; width: 10px;  margin-left:300px">
     Available Student
     </div>
-    <div class="container1"><br>
+    <div class="container1">
       &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
       &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
       &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
       &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
       &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; 
-      <button mat-raised-button color="primary" [routerLink]="['/create']" class="action-button">Add student</button>
       <table class="table">
         <thead>
           <tr>
@@ -23,36 +26,48 @@
         </thead>
         <tbody>
           <tr>
-            <td>1</td>
-            <td>Course </td>
-            <td>Course Description </td>
-            <td>date</td>
-            <td>location</td>
+            <td *ngIf="!isEditing">Yash</td>
+            <td *ngIf="isEditing"><input type="text"  style="width: 80px;" [(ngModel)]="editedFirstName"></td>
+            <td *ngIf="!isEditing">Gole</td>
+            <td *ngIf="isEditing"><input type="text"  style="width: 80px;" [(ngModel)]="editedLastName"></td>
+            <td *ngIf="!isEditing">male</td>
+            <td *ngIf="isEditing"><input type="text" style="width: 80px;" [(ngModel)]="editedGender"></td>
+            <td *ngIf="!isEditing">date</td>
+            <td *ngIf="isEditing"><input type="date"  style="width: 90px;" [(ngModel)]="editedDOB"></td>
+            <td *ngIf="!isEditing">Mumbai</td>
+            <td *ngIf="isEditing"><input type="text" style="width: 90px;" [(ngModel)]="editedLocation"></td>
             <td>
-                <button mat-raised-button color="primary" class="action-button">Update</button>
-                <button mat-raised-button color="warn" class="action-button">Delete</button>
+              <div *ngIf="!isEditing">
+                <i class="fa fa-edit edit-icon" style="color:blue" (click)="startEditing()"></i>
+                &nbsp;
+                <i class="fa fa-trash trash-icon" style="color:red"></i>
+              </div>
+              <div *ngIf="isEditing" class="update-button-expanded">
+                <i class="fa fa-check check-icon" style="color:green" (click)="saveEdit()"></i>
+                &nbsp;
+                <i class="fa fa-times times-icon" style="color:red" (click)="cancelEdit()"></i>
+              </div>
             </td>
           </tr>
         </tbody>
-      </table>   
+      </table><br><br><br><br><br> <br> <br><br><br>
+      <button mat-raised-button class="action-button" [routerLink]="['/create']" style="margin-left: 600px;" color="primary">Add student</button>   
     
     </div>
 </mat-grid-tile>
     <mat-grid-tile class="tile">
-    <div class="mat-grid-title-content" style="margin-top: -460px; margin-left:200px">
+    <div class="mat-grid-title-content" style="margin-top: -460px; font-size: 23px; color: red; margin-left:200px">
     Available Courses
     </div>
-    <div class="container2"><br>
+    <div class="container2">
       &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
       &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
       &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
       &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
       &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; 
-      <button mat-raised-button color="primary" [routerLink]="['/student']" class="action-button">Add Course</button>
         <table class="table">
             <thead>
               <tr>
-                <th>Id</th>
                 <th>Name</th>
                 <th>Desc</th>
                 <th>Action</th>
@@ -60,17 +75,28 @@
             </thead>
             <tbody>
               <tr>
-                <td>1</td>
-                <td>Course 1</td>
-                <td>Course Description 1</td>
+                <td *ngIf="!isEdit">yash</td> 
+                <td *ngIf="isEdit"><input type="text" [(ngModel)]="editName"></td>
+                <td *ngIf="!isEdit">Course 1</td>
+                <td *ngIf="isEdit"><input type="text" [(ngModel)]="editDesc"></td>
                 <td>
-                    <button mat-raised-button color="primary" class="action-button">Update</button>
-                    <button mat-raised-button color="warn" class="action-button">Delete</button>
+                  <div *ngIf="!isEdit">
+                    <i class="fa fa-edit" style="color:blue" (click)="startEdit()"></i>
+                    &nbsp;
+                    <i class="fa fa-trash" style="color:red"></i>
+                  </div>
+                  <div *ngIf="isEdit" class="update-button-expanded">
+                    <i class="fa fa-check" style="color:green" (click)="Edit()"></i>
+                    &nbsp;
+                    <i class="fa fa-times" style="color:red" (click)="cancel()"></i>
+                  </div>
+                  
                 </td>
               </tr>
             </tbody>
-          </table>   
+          </table><br><br><br><br><br><br><br><br><br>
+          <button mat-raised-button class="action-button" [routerLink]="['/Course']" style="margin-left: 500px;" color="primary">Add course</button>   
     
     </div>
     </mat-grid-tile>
-</mat-grid-list>
+</mat-grid-list> 

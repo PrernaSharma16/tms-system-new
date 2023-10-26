@@ -24,4 +24,16 @@ export class CreateUserComponent {
 
   }
 
+  onSubmit() {
+    if (this.createForm.invalid) {
+      for (const control in this.createForm.controls) {
+        this.createForm.get(control).markAsTouched();
+      }
+    }
+  }
+
+  
+
+  
+
 }

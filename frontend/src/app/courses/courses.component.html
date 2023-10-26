@@ -1,0 +1,26 @@
+<div class="login-container">
+    <div class="login-card">
+      <h1 class="login-heading">Add your preferred courses</h1>
+      <form [formGroup]="createForm">
+        <div class="input-container">
+          <div class="form-group">
+            <input type="text" id="courseid" formControlName="courseid" class="form-control" placeholder="Course Id">
+            <div class="text-danger" *ngIf="createForm.get('courseid').hasError('required') && createForm.get('courseid').touched">Course_ID is required.</div>
+          </div>
+        </div><br>
+  
+        <div class="input-container">
+          <div class="form-group">
+            <input type="text" id="coursename" formControlName="coursename" class="form-control" placeholder="Course Name">
+            <div class="text-danger" *ngIf="createForm.get('coursename').hasError('required') && createForm.get('coursename').touched">Course Name is required.</div>
+          </div>
+        </div>
+  
+        <div class="input-container"> <!-- Add an empty input-container for consistent spacing -->
+        </div>
+  
+        <button type="submit" class="btn btn-primary">Add Course</button>
+      </form>
+    </div>
+  </div>
+  

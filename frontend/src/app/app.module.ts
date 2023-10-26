@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { MatIconModule } from '@angular/material/icon';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginHeaderComponent } from './login-header/login-header.component';
@@ -18,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CoursesComponent } from './courses/courses.component';
 
 
 
@@ -29,7 +30,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     LoginFooterComponent,
     CreateUserComponent,
     StudentViewComponent,
-    TeacherViewComponent
+    TeacherViewComponent,
+    CoursesComponent
     
   ],
   imports: [
@@ -42,7 +44,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatGridListModule,
     HttpClientModule,
     FormsModule,
-    BrowserAnimationsModule,ReactiveFormsModule
+    BrowserAnimationsModule,ReactiveFormsModule,
+    MatIconModule
     
     
   ],
