@@ -1,0 +1,46 @@
+.mat-row:not(:last-child) {
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+
+  .table-container {
+    width: 100%; /* Adjust the width as needed */
+    height: 520px; /* Adjust the height as needed */
+    overflow: auto; /* Add scrollbar if the content overflows */
+    border: 1px solid #ccc; /* Add borders or other styling as desired */
+    
+  }
+  
+
+  .column-names {
+    background-color: #f0f0f0; /* Background color for column names row */
+    
+  }
+
+  .table-card {
+    width: 100%; /* Adjust the width of the card as needed */
+    height: 100%; /* Adjust the height of the card as needed */
+    margin-top:20px;
+    margin-left:70px;
+  }
+
+  .mat-elevation-z8
+  {
+    width: 60%;
+    margin-left: 240px;
+  }
+
+  .circular-button {
+    border-radius: 50%;
+    width: 95px;
+    height: 36px;
+    min-width: 36px;
+    min-height: 36px;
+    padding: 0;
+    line-height: 36px;
+  }
+  
+  .data-row
+  {
+    margin-left: 100px;
+  }

@@ -1,0 +1,57 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80.5vh;
+}
+
+.login-card {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  margin-top: -40px;
+  margin-left: 1000px;
+  height:400px;
+}
+
+.login-heading {
+  text-align: center;
+  color: orange; /* Blue font color */
+  margin-left:-330px;
+}
+
+.input-field {
+  margin: 10px 0;
+  position: relative; /* Add this to enable absolute positioning of error messages */
+  width:380px;
+}
+
+.text-danger {
+  position: absolute;
+  top: 100%; /* Position the error message below the input field */
+  left: 0;
+}
+
+select,
+input {
+  width: 100%; /* Adjusted width to 100% to fit within the card */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 37px;
+}
+
+button {
+  background-color: #007ACC;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #005999;
+}
