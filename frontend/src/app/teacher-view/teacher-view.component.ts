@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-teacher-view',
@@ -6,24 +7,51 @@ import { Component } from '@angular/core';
   styleUrls: ['./teacher-view.component.css']
 })
 export class TeacherViewComponent {
+
+  newStudent = {
+    firstName: '',
+    lastName: '',
+    gender: '',
+    dob: '',
+    rollno:'',
+    location: ''
+  };
+
+
+
+  
+
   isEditing: boolean = false;
   editedFirstName: string;
   editedLastName: string;
   editedGender: string;
   editedDOB: string;
+  editedRollNo: number;
   editedLocation: string;
- 
-  isEdit:boolean = false;
-  editLocation: string;
-  editName: string;
-  editDesc: string;
 
-  startEdit()
-  {
+
+  isEdit: boolean = false;
+  editCourseId: string;
+  editCourseName: string;
+  editCourseDesc: string;
+  editTrainerName: string;
+  editSoftwareReq: string;
+  editStartDate: string;
+  editEndDate: string;
+
+   startEdit() {
     this.isEdit = true;
-    this.editName = 'yash';
-    this.editDesc = 'Course 1';
+    this.editCourseId = '1';
+    this.editCourseName = 'Course';
+    this.editCourseDesc = 'Desc';
+    this.editTrainerName = 'Trainer';
+    this.editSoftwareReq = 'Software';
+    this.editStartDate = '2023-01-01';
+    this.editEndDate = '2023-12-31';
   }
+
+  
+
 
   Edit()
   {
