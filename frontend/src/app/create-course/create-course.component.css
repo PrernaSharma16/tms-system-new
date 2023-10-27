@@ -1,16 +1,11 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-  }
+
   
   .login-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    margin-top: -100px;
+    height: 88vh;
+    margin-top:-30px;
     position: relative;
   }
   
@@ -24,6 +19,8 @@ body {
     text-align: center;
     position: relative;
     min-height: 400px; /* Set a minimum height to prevent it from changing */
+    margin-top: 2%;
+    height:10%
   }
   
   .login-heading {
@@ -60,7 +57,7 @@ body {
   /* ... (previous CSS styles) */
   
   .form-control {
-    width: 90%; /* Textboxes take 100% of the parent width */
+    width: 80%; /* Textboxes take 100% of the parent width */
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -90,7 +87,7 @@ body {
     border-radius: 20px;
     padding: 14px 20px; /* Adjust the padding as needed */
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: -10px;
   }
   
   button:hover {

@@ -9,12 +9,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 91vh;
   margin-top: -100px;
   position: relative;
 }
 
 .login-card {
+  margin-top:60px;
+  margin-left:100px;
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 15px;
@@ -23,7 +25,7 @@ body {
   width: 60%; /* Adjust the width as needed */
   text-align: center;
   position: relative;
-  min-height: 400px; /* Set a minimum height to prevent it from changing */
+  min-height: 370px; /* Set a minimum height to prevent it from changing */
 }
 
 .login-heading {

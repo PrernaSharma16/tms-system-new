@@ -2,7 +2,7 @@
 
 
 .tile {
-    background: lightblue;
+    background: white;
      /* Adjust the margin to control the gap between tiles */
     
     
@@ -13,7 +13,7 @@
     height: 60%; /* Adjust the height as needed */
     color: #070707; /* Set the text color for better visibility */
     padding: 10px; /* Add padding for spacing */
-    width:700px;
+    width:600px;
     margin-top:-10px;
     margin-left:-330px;
   }
@@ -23,7 +23,7 @@
     height: 60%; /* Adjust the height as needed */
     color: #070707; /* Set the text color for better visibility */
     padding: 10px; /* Add padding for spacing */
-    width:700px;
+    width:600px;
     margin-top:-10px;
     margin-left:-400px;
   }

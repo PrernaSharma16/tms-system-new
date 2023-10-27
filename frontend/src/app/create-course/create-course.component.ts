@@ -13,16 +13,22 @@ export class CreateCourseComponent {
 
   constructor(private fb:FormBuilder) {
     this.createForm = this.fb.group({
-      firstname: ['', Validators.required],
-      lastname: ['', Validators.required],
-      age: ['', Validators.required],
-      gender: ['', Validators.required],
-      location:['',Validators.required],
-      date: [null, Validators.required]
+      courseid: ['', Validators.required],
+      coursename: ['', Validators.required],
+      coursedesc: ['', Validators.required],
+      trainername: ['', Validators.required],
+      softwarereq:['',Validators.required],
+      startdate: [null, Validators.required],
+      enddate: [null, Validators.required]
 
-    })
+    });
 
   }
+
+
+
+
+
 
 
 }

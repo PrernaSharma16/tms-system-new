@@ -4,8 +4,8 @@
 
 
   .table-container {
-    width: 100%; /* Adjust the width as needed */
-    height: 520px; /* Adjust the height as needed */
+    width: 100.5%; /* Adjust the width as needed */
+    height: 465px; /* Adjust the height as needed */
     overflow: auto; /* Add scrollbar if the content overflows */
     border: 1px solid #ccc; /* Add borders or other styling as desired */
     
@@ -18,10 +18,10 @@
   }
 
   .table-card {
-    width: 100%; /* Adjust the width of the card as needed */
-    height: 100%; /* Adjust the height of the card as needed */
-    margin-top:20px;
-    margin-left:70px;
+    width: 60%; /* Adjust the width of the card as needed */
+    height: 70%; /* Adjust the height of the card as needed */
+    margin-top:10px;
+    margin-left:250px;
   }
 
   .mat-elevation-z8

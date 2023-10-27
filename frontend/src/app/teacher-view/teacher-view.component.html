@@ -1,30 +1,31 @@
-<mat-toolbar color="primary"  class="other-navbar" style="width: 1499px;">
-  <span style="margin-left: 647px; font-size: 30px;">MINDCRAFT</span>
+<mat-toolbar color="primary" class="other-navbar" style="width: 1350px;">
+  <span style="margin-left: 580px; font-size: 30px;">MINDCRAFT</span>
   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 
   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
-  <i class='far fa-user-circle' style='font-size:38px;color:white'></i> 
+
+  <i class='far fa-user-circle' style='font-size:38px;color:white'></i>
 </mat-toolbar>
 
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
 
-<mat-grid-list  cols="2" rowHeight="560px">
-    <mat-grid-tile class="tile">
-    <div class="mat-grid-title-content" style="margin-top: -460px; color: red; font-size: 20px; width: 40px;  margin-left:300px">
-    AvailableStudent
+<mat-grid-list cols="2" rowHeight="560px">
+  <mat-grid-tile class="tile">
+    <div class="mat-grid-title-content"
+      style="margin-top: -460px; color: red; font-size: 20px; width: 40px;  margin-left:300px">
+      AvailableStudent
     </div>
     <div class="container1">
       &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
       &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
       &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
-      &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; 
-      <table class="table">
+      &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;
+      <table class="table col-md-12 w-100">
         <thead>
           <tr>
             <th>First Name</th>
@@ -38,13 +39,13 @@
         <tbody>
           <tr>
             <td *ngIf="!isEditing">Yash</td>
-            <td *ngIf="isEditing"><input type="text"  style="width: 80px;" [(ngModel)]="editedFirstName"></td>
+            <td *ngIf="isEditing"><input type="text" style="width: 80px;" [(ngModel)]="editedFirstName"></td>
             <td *ngIf="!isEditing">Gole</td>
-            <td *ngIf="isEditing"><input type="text"  style="width: 80px;" [(ngModel)]="editedLastName"></td>
+            <td *ngIf="isEditing"><input type="text" style="width: 80px;" [(ngModel)]="editedLastName"></td>
             <td *ngIf="!isEditing">male</td>
             <td *ngIf="isEditing"><input type="text" style="width: 80px;" [(ngModel)]="editedGender"></td>
             <td *ngIf="!isEditing">date</td>
-            <td *ngIf="isEditing"><input type="date"  style="width: 90px;" [(ngModel)]="editedDOB"></td>
+            <td *ngIf="isEditing"><input type="date" style="width: 90px;" [(ngModel)]="editedDOB"></td>
             <td *ngIf="!isEditing">Mumbai</td>
             <td *ngIf="isEditing"><input type="text" style="width: 90px;" [(ngModel)]="editedLocation"></td>
             <td>
@@ -62,55 +63,57 @@
           </tr>
         </tbody>
       </table><br><br><br><br><br> <br> <br><br><br>
-      <button mat-raised-button class="action-button" [routerLink]="['/create']" style="margin-left: 600px;" color="primary">Add student</button>   
-    
+      <button mat-raised-button class="action-button" [routerLink]="['/create']" style="margin-left: 500px;"
+        color="primary">Add student</button>
+
     </div>
-</mat-grid-tile>
-    <mat-grid-tile class="tile">
+  </mat-grid-tile>
+  <mat-grid-tile class="tile">
     <div class="mat-grid-title-content" style="margin-top: -460px; font-size: 23px; color: red; margin-left:200px">
-    Available Courses
+      Available Courses
     </div>
     <div class="container2">
       &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
       &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
       &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
-      &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; 
-        <table class="table">
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Desc</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td *ngIf="!isEdit">yash</td> 
-                <td *ngIf="isEdit"><input type="text" [(ngModel)]="editName"></td>
-                <td *ngIf="!isEdit">Course 1</td>
-                <td *ngIf="isEdit"><input type="text" [(ngModel)]="editDesc"></td>
-                <td>
-                  <div *ngIf="!isEdit">
-                    <i class="fa fa-edit" style="color:blue" (click)="startEdit()"></i>
-                    &nbsp;
-                    <i class="fa fa-trash" style="color:red"></i>
-                  </div>
-                  <div *ngIf="isEdit" class="update-button-expanded">
-                    <i class="fa fa-check" style="color:green" (click)="Edit()"></i>
-                    &nbsp;
-                    <i class="fa fa-times" style="color:red" (click)="cancel()"></i>
-                  </div>
-                  
-                </td>
-              </tr>
-            </tbody>
-          </table><br><br><br><br><br><br><br><br><br>
-          <button mat-raised-button class="action-button" [routerLink]="['/course']" style="margin-left: 600px;" color="primary">Add course</button>   
-    
+      &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Desc</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td *ngIf="!isEdit">yash</td>
+            <td *ngIf="isEdit"><input type="text" [(ngModel)]="editName"></td>
+            <td *ngIf="!isEdit">Course 1</td>
+            <td *ngIf="isEdit"><input type="text" [(ngModel)]="editDesc"></td>
+            <td>
+              <div *ngIf="!isEdit">
+                <i class="fa fa-edit" style="color:blue" (click)="startEdit()"></i>
+                &nbsp;
+                <i class="fa fa-trash" style="color:red"></i>
+              </div>
+              <div *ngIf="isEdit" class="update-button-expanded">
+                <i class="fa fa-check" style="color:green" (click)="Edit()"></i>
+                &nbsp;
+                <i class="fa fa-times" style="color:red" (click)="cancel()"></i>
+              </div>
+
+            </td>
+          </tr>
+        </tbody>
+      </table><br><br><br><br><br><br><br><br><br>
+      <button mat-raised-button class="action-button" [routerLink]="['/course']" style="margin-left: 500px;"
+        color="primary">Add course</button>
+
     </div>
-    </mat-grid-tile>
-</mat-grid-list> 
+  </mat-grid-tile>
+</mat-grid-list>
 
 
 
@@ -118,6 +121,6 @@
 
 
 
-<mat-toolbar color="primary"  class="other-navbar" style="width: 1499px; margin-top: 6px;">
-  <span style="margin-left: 530px; font-size: 30px;">mindcraft.in | All rights reserved</span>      
+<mat-toolbar color="primary" class="other-navbar" style="width: 1350px; margin-top: 6px;">
+  <span style="margin-left: 470px; font-size: 30px;">mindcraft.in | All rights reserved</span>
 </mat-toolbar>
