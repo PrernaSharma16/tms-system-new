@@ -20,12 +20,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CreateCourseComponent } from './create-course/create-course.component';
 
-
-
-
-
-
-
 @NgModule({
   declarations: [
     AppComponent,

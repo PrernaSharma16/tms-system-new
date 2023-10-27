@@ -32,7 +32,7 @@ public class UserController {
         System.out.println(response);
         if("success".equals(response.get("status"))){
             System.out.println("reached here");
-            int username = userView.getUsername();
+            String username = userView.getUsername();
             String role = userView.getRole();
             final String token = jwtUtil.generateToken(username, role);
             response.put("token", token);

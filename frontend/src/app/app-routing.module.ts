@@ -8,7 +8,7 @@ import { CreateCourseComponent } from './create-course/create-course.component';
 
 
 const routes: Routes = [
-  {path:'',component:LoginBodyComponent},
+  {path:'login',component:LoginBodyComponent},
   {path:'create',component:CreateUserComponent},
   {path:'teacher',component:TeacherViewComponent},
   {path:'student',component:StudentViewComponent},
