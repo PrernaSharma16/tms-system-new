@@ -28,6 +28,7 @@ export class TeacherViewComponent {
   editedDOB: string;
   editedRollNo: number;
   editedLocation: string;
+  editedRowIndex: number = -1;
 
 
   isEdit: boolean = false;
@@ -38,6 +39,7 @@ export class TeacherViewComponent {
   editSoftwareReq: string;
   editStartDate: string;
   editEndDate: string;
+ 
 
    startEdit() {
     this.isEdit = true;
@@ -48,6 +50,7 @@ export class TeacherViewComponent {
     this.editSoftwareReq = 'Software';
     this.editStartDate = '2023-01-01';
     this.editEndDate = '2023-12-31';
+    
   }
 
   
@@ -56,41 +59,39 @@ export class TeacherViewComponent {
   Edit()
   {
     this.isEdit = false;
+ 
   }
 
   cancel()
   {
     this.isEdit = false;
+    
   }
 
 
-  // Function to start editing
+  
   startEditing() {
+  
     this.isEditing = true;
-    // Initialize edited values with current data
-    this.editedFirstName = 'Yash'; // Replace with actual data
-    this.editedLastName = 'Gole'; // Replace with actual data
-    this.editedGender = 'male'; // Replace with actual data
-    this.editedDOB = 'date'; // Replace with actual data
+    this.editedFirstName = 'Yash';
+    this.editedLastName = 'Gole';
+    this.editedGender = 'male';
+    this.editedDOB = 'date';
+
   
 
 
   }
 
-  // Function to save the edit
+  
   saveEdit() {
-    // Implement logic to save the edited data (e.g., make an API call)
-    this.isEditing = false;
+       this.isEditing = false;
+       this.editedRowIndex = -1;
   }
 
-  // Function to cancel the edit
+  
   cancelEdit() {
     this.isEditing = false;
-    // Optionally, reset edited values to the original data
-    // this.editedFirstName = '';
-    // this.editedLastName = '';
-    // this.editedGender = '';
-    // this.editedDOB = '';
-    // this.editedLocation = '';
-  }
+    this.editedRowIndex = -1;
+     }
 }

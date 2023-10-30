@@ -3,29 +3,32 @@
 
 .tile {
     background: white;
-     /* Adjust the margin to control the gap between tiles */
+    
     
     
   }
 
+  
+
+
   .container1 {
-    background-color: #e6e1e0; /* Set the desired background color */
+    background-color: white; /* Set the desired background color */
     height: 60%; /* Adjust the height as needed */
     color: #070707; /* Set the text color for better visibility */
     padding: 10px; /* Add padding for spacing */
     width:600px;
     margin-top:-10px;
-    margin-left:-330px;
+    margin-left:-250px;
   }
 
   .container2 {
-    background-color: #e6e1e0; /* Set the desired background color */
+    background-color:white; /* Set the desired background color */
     height: 60%; /* Adjust the height as needed */
     color: #070707; /* Set the text color for better visibility */
-    padding: 10px; /* Add padding for spacing */
-    width:600px;
+    padding: 9.7px; /* Add padding for spacing */
+    width:550px;
     margin-top:-10px;
-    margin-left:-400px;
+    margin-left:-390px;
   }
 
   .table {
@@ -33,24 +36,22 @@
     max-width: 800px;
     border-collapse: collapse;
     font-size: 16px;
-    background-color: #fff;
-    border: 1px solid #ccc;
+    background-color: white;
+    border: none;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     table-layout: fixed;
   }
   
   .table th {
-    background-color: #007ACC;
-    color: #fff;
+    background-color: white;
+    color: black;
     text-align: center;
     padding: 10px;
     position: relative;
   }
   
   .table th, .table td {
-    border: 1px solid #ccc;
-    padding: 10px;
     text-align: center;
     position: relative;
   }
@@ -129,7 +130,7 @@
   border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 80%;
-  width: 300px; /* Adjust the width as needed */
+  width: 300px; 
   text-align: center;
 }
 
