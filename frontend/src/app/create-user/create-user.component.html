@@ -10,13 +10,13 @@
             <div class="form-group">
               <input type="text" id="firstname" formControlName="firstname" class="form-control" placeholder="First Name">&nbsp;&nbsp;
               <div class="text-danger" *ngIf="createForm.get('firstname').hasError('required') && createForm.get('firstname').touched">First Name is required.</div>
-            </div>
+            </div><br>
           </div>
           <div class="col">
             <div class="form-group">
               <input type="text" id="lastname" formControlName="lastname" class="form-control" placeholder="Last Name">
               <div class="text-danger" *ngIf="createForm.get('lastname').hasError('required') && createForm.get('lastname').touched">Last Name is required.</div>
-            </div>
+            </div><br>
           </div>
           
         </div>
@@ -26,7 +26,7 @@
             <div class="form-group">
               <input class="age" type="number" id="age" formControlName="age" class="form-control" placeholder="Age">
               <div class="text-danger" *ngIf="createForm.get('age').hasError('required') && createForm.get('age').touched">Age is required.</div>
-            </div>
+            </div><br>
           </div>
           <div class="col">
             <div class="form-group">

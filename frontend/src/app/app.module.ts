@@ -18,7 +18,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
-import { CreateCourseComponent } from './create-course/create-course.component';
 
 @NgModule({
   declarations: [
@@ -28,8 +27,7 @@ import { CreateCourseComponent } from './create-course/create-course.component';
     LoginFooterComponent,
     CreateUserComponent,
     StudentViewComponent,
-    TeacherViewComponent,
-    CreateCourseComponent
+    TeacherViewComponent
     
   ],
   imports: [
@@ -44,6 +42,8 @@ import { CreateCourseComponent } from './create-course/create-course.component';
     FormsModule,
     BrowserAnimationsModule,ReactiveFormsModule,
     MatIconModule
+    
+
     
     
   ],

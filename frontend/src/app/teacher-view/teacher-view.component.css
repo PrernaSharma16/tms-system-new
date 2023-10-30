@@ -2,7 +2,7 @@
 
 
 .tile {
-    background: lightblue;
+    background: white;
      /* Adjust the margin to control the gap between tiles */
     
     
@@ -13,7 +13,7 @@
     height: 60%; /* Adjust the height as needed */
     color: #070707; /* Set the text color for better visibility */
     padding: 10px; /* Add padding for spacing */
-    width:700px;
+    width:600px;
     margin-top:-10px;
     margin-left:-330px;
   }
@@ -23,7 +23,7 @@
     height: 60%; /* Adjust the height as needed */
     color: #070707; /* Set the text color for better visibility */
     padding: 10px; /* Add padding for spacing */
-    width:700px;
+    width:600px;
     margin-top:-10px;
     margin-left:-400px;
   }
@@ -103,6 +103,32 @@
     color: #fff;
     position: relative;
   }
-  
 
- 
+
+  /* Modal styles */
+.modal {
+  display: none; /* Hide the modal by default */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background overlay */
+}
+
+.modal form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 80%;
+  width: 300px; /* Adjust the width as needed */
+  text-align: center;
+}
+
