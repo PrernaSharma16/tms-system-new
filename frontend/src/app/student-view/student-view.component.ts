@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { AuthService } from '../auth.service';
+// import { AuthService } from '../auth.service';
+import { LoginService } from '../login-body/login.service';
 
 @Component({
   selector: 'app-student-view',
@@ -20,6 +21,6 @@ export class StudentViewComponent {
 
   };
 
-  constructor(private authService: AuthService) {}
+  constructor(private loginService: LoginService) {}
 
 }

@@ -22,7 +22,7 @@ public class JwtUtil {
     @Value("${jwt.secret}")
     private String secret;
 
-    public String generateToken(int username, String role) {
+    public String generateToken(String username, String role) {
         Map<String, Object> claims = new HashMap<>();
         claims.put("role", role);
         return createToken(claims, String.valueOf(username));

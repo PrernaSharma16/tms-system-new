@@ -25,7 +25,9 @@ public class UserService {
 
     public Map<String, String> userCheck(UserView userView){
         String sql = "SELECT * FROM roles WHERE username = ?";
+        System.out.println(userView.getRole());
         List<Map<String, Object>> result = jdbcTemplate.queryForList(sql, userView.getUsername());
+        System.out.println("Result from database: " + result);
         System.out.println("backend: "+result);
         if(!result.isEmpty()){
 

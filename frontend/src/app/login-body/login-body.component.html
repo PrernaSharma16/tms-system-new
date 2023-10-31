@@ -1,14 +1,13 @@
 <app-login-header></app-login-header>
 
-
 <div class="login-container">
   <div class="login-card"><br><br>
     <h1 class="login-heading" style="margin-top:-10%">Login</h1>
     <form [formGroup] = "loginForm">
       <div class="input-field">
-        <select placeholder="Role" id="role" name="role">
-          <option value="student">Student</option>
-          <option value="teacher">Teacher</option>
+        <select placeholder="Role" id="role" formControlName="role" type="text">
+          <option value="student">student</option>
+          <option value="teacher">teacher</option>
         </select>
       </div>
       <div class="input-field"><br>
@@ -23,14 +22,10 @@
         Password is required.
         </div>
       </div><br>
-      <button type="submit" [routerLink]="['teacher']">Login</button><br><br>
+      <button type="submit" (click)="onSubmit()">Login</button><br><br>
     </form>
   </div>
 </div>
-
-
-
-
 
 
 <app-login-footer></app-login-footer>

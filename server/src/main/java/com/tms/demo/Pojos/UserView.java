@@ -10,11 +10,11 @@ public class UserView {
     @Id
     private int id;
 
-    @Column(name = "username")
-    private int username;
-
     @Column(name = "role")
     private String role;
+
+    @Column(name = "username")
+    private String username;
 
     @Column(name = "password")
     private String password;
@@ -23,7 +23,7 @@ public class UserView {
 
     }
 
-    public UserView(int username, String dob, String role, String password) {
+    public UserView(String role,String username,String password) {
         this.username = username;
         this.role = role;
         this.password = password;
@@ -37,11 +37,11 @@ public class UserView {
         this.id = id;
     }
 
-    public int getUsername() {
+    public String getUsername() {
         return username;
     }
 
-    public void setUsername(int username) {
+    public void setUsername(String username) {
         this.username = username;
     }
 
