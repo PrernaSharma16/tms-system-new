@@ -38,7 +38,7 @@ export class LoginBodyComponent implements OnInit{
           alert('Login successfull');
 
           if(user.role === 'student'){
-            this.router.navigate(['sample']);
+            this.router.navigate(['student']);
           } else if (user.role === 'teacher'){
             this.router.navigate(['teacher']);
           }else{

@@ -8,6 +8,7 @@ import { SampleComponent } from './sample/sample.component';
 
 
 const routes: Routes = [
+  {path:'',component:LoginBodyComponent},
   {path:'login',component:LoginBodyComponent},
   {path:'teacher',component:TeacherViewComponent},
   {path:'student',component:StudentViewComponent},
