@@ -46,4 +46,9 @@ public class UserController {
     public String hello(){
         return "hello";
     }
+
+    @GetMapping("/student")
+    public String studentView(){
+        return "student-view";
+    }
 }

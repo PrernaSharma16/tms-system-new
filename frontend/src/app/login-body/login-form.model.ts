@@ -1,6 +1,6 @@
 export class LoginForm {
     role: string;
-    username: Number;
+    username: string;
     password: string;
   }
   

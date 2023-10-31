@@ -5,13 +5,13 @@
     <h1 class="login-heading" style="margin-top:-10%">Login</h1>
     <form [formGroup] = "loginForm">
       <div class="input-field">
-        <select placeholder="Role" id="role" formControlName="role">
+        <select placeholder="Role" id="role" formControlName="role" type="text">
           <option value="student">student</option>
           <option value="teacher">teacher</option>
         </select>
       </div>
       <div class="input-field"><br>
-        <input formControlName="username" placeholder="Username" type="number">
+        <input formControlName="username" placeholder="Username" type="text">
         <div style="color:red" class="text-danger" *ngIf="loginForm.get('username').hasError('required') && loginForm.get('username').touched">
         Username is required.
         </div>
@@ -22,7 +22,7 @@
         Password is required.
         </div>
       </div><br>
-      <button type="submit">Login</button><br><br>
+      <button type="submit" (click)="onSubmit()">Login</button><br><br>
     </form>
   </div>
 </div>

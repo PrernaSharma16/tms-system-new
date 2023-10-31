@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { LoginForm } from './login-form.model';
 import { LoginService } from './login.service';
+import { StudentViewComponent } from '../student-view/student-view.component';
 
 @Component({
   selector: 'app-login-body',
@@ -14,42 +15,45 @@ import { LoginService } from './login.service';
 export class LoginBodyComponent implements OnInit{
 
   loginForm: FormGroup;
-  loginData: LoginForm; // Use the interface for form data
 
-  constructor(private loginService: LoginService, private router: Router, private fb: FormBuilder) {
-    // this.loginForm = this.fb.group({
-    //   role: [null, Validators.required],
-    //   username: ['', Validators.required],
-    //   password: ['', Validators.required]
-    // }); 
-   }
+  constructor(private formBuilder: FormBuilder, private http: HttpClient, private router: Router) {}
 
-  onSubmit(){
-    console.log('Username: '+this.loginForm.get('username').value);
-    console.log('Password: '+this.loginForm.get('password').value);
-    console.log('role: '+this.loginForm.get('role').value);
-
-    this.loginService.login(this.loginForm.get('username').value, this.loginForm.get('password').value, this.loginForm.get('role').value).subscribe(
-      (response: any) => {
-        if(response.status === 'success'){
-          console.log('Login successfull');
-        }else{
-          console.log('Invalid credentials. Please try again');
-        }
-
-      },
-      (error) =>{
-        console.error('Error: ', error)
-      }
-    );
-  }
-  ngOnInit(): void {
-    this.loginForm = this.fb.group({
-      role: [null, Validators.required],
+  ngOnInit() {
+    this.loginForm = this.formBuilder.group({
+      role: ['', Validators.required],
       username: ['', Validators.required],
       password: ['', Validators.required]
     });
-    
+  }
+
+  onSubmit() {
+    if (this.loginForm.invalid){
+      return;
+    }
+    const user = this.loginForm.value;
+    this.http.post<any>('http://localhost:8080/login', user).subscribe(
+      response => {
+        if(response.status === 'success'){
+          console.log('Login successfull');
+          alert('Login successfull');
+
+          if(user.role === 'student'){
+            this.router.navigate(['sample']);
+          } else if (user.role === 'teacher'){
+            this.router.navigate(['teacher']);
+          }else{
+            console.error('Unknown role: ', user.role);
+          }
+
+        }else{
+          console.log('Login failed');
+          alert('Login failed. Invalid username or password');
+        }
+      },
+      error => {
+        alert('An error occurred while processing your request');
+      }
+    );
   }
 
 }

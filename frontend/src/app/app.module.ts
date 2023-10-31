@@ -18,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SampleComponent } from './sample/sample.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     LoginFooterComponent,
     CreateUserComponent,
     StudentViewComponent,
-    TeacherViewComponent
+    TeacherViewComponent,
+    SampleComponent
     
   ],
   imports: [
