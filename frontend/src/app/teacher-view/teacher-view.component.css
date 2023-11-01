@@ -219,23 +219,15 @@
 
 
 
-.close-button {
-  background: none;
-  border: none;
-  color: #999; /* Change the color to your preferred color */
-  font-size: 24px; /* Adjust the font size as needed */
+
+
+
+
+.text-danger 
+{
   position: absolute;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-  outline: none;
+
 }
-
-.close-button:hover {
-  color: #ff0000; /* Change the color on hover if desired */
-}
-
-
 
 
 
