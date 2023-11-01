@@ -105,12 +105,57 @@
   top: 0;
   width: 100%;
   height: 100%;
+  max-height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.7);
+  
 }
 
-.modal form {
+.custom-dropdown select {
+  background-color: transparent; /* Make the background transparent */
+  border: none; /* Remove the border */
+  border-bottom: 1px solid #000; /* Add a bottom border for styling */
+  width: 100%; /* Take up the full width of the container */
+  font-size: 16px; /* Adjust font size as needed */
+  color: #000; /* Set text color */
+  padding: 10px 0; /* Add padding as needed */
+}
+
+/* Style the dropdown arrow */
+.custom-dropdown select::after {
+  content: '\25BC'; /* Use a down arrow character */
   position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  pointer-events: none; /* Ensure that the arrow doesn't interfere with interactions */
+}
+
+/* Adjust the position and size of the dropdown */
+.custom-dropdown {
+  position: relative;
+}
+
+/* Adjust the font size and padding for form elements as needed */
+.md-form .form-group label {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.md-form .form-control {
+  padding: 10px;
+  font-size: 14px;
+}
+
+.text-danger {
+  font-size: 12px; /* Set the font size for text-danger messages */
+  margin-bottom: 0; /* Remove the margin at the bottom of text-danger messages */
+}
+
+
+
+.modal form {
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -124,8 +169,8 @@
 }
 
 .modal .modal-content {
-  max-width: 200%;
-  width: 100%;
+  width: 100%; /* Set the width to 100% */
+  max-width: 440px; /* Adjust the maximum width as needed */
   margin: 0 auto;
   background-color: white;
   border-radius: 5px;
@@ -162,3 +207,8 @@
   background-color: #ccc;
   color: #000;
 }
+
+
+
+
+
