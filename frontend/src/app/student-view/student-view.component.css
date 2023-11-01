@@ -8,6 +8,7 @@
   height: 77%; /* Adjust the height as needed */
   overflow: auto; /* Add a scrollbar if the content overflows */
   border: none; /* Remove borders */
+  table-layout: fixed;
   
 }
 
@@ -26,17 +27,10 @@
 .mat-elevation-z8 {
   width: 100%; /* Adjust the width as needed */
   margin-left: 0; /* Reset margin-left */
+
 }
 
-.circular-button {
-  border-radius: 50%;
-  width: 50px; /* Standardize button size */
-  height: 36px;
-  min-width: 36px;
-  min-height: 36px;
-  padding: 0;
-  line-height: 36px;
-}
+
 
 .data-row {
   margin-left: 0; /* Reset margin-left */

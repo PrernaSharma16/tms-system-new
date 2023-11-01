@@ -140,17 +140,23 @@
 .md-form .form-group label {
   font-size: 14px;
   margin-bottom: 5px;
+  position: relative;
 }
 
 .md-form .form-control {
   padding: 10px;
   font-size: 14px;
+  position: relative;
 }
 
 .text-danger {
   font-size: 12px; /* Set the font size for text-danger messages */
   margin-bottom: 0; /* Remove the margin at the bottom of text-danger messages */
 }
+
+
+
+
 
 
 
@@ -172,10 +178,13 @@
   width: 100%; /* Set the width to 100% */
   max-width: 440px; /* Adjust the maximum width as needed */
   margin: 0 auto;
+  max-height: 100%;
   background-color: white;
   border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
+
+
 
 .modal .modal-body {
   display: flex;
@@ -207,6 +216,28 @@
   background-color: #ccc;
   color: #000;
 }
+
+
+
+.close-button {
+  background: none;
+  border: none;
+  color: #999; /* Change the color to your preferred color */
+  font-size: 24px; /* Adjust the font size as needed */
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  outline: none;
+}
+
+.close-button:hover {
+  color: #ff0000; /* Change the color on hover if desired */
+}
+
+
+
+
 
 
 

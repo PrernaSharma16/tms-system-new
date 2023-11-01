@@ -19,6 +19,7 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SampleComponent } from './sample/sample.component';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -38,12 +39,13 @@ import { SampleComponent } from './sample/sample.component';
     MatToolbarModule,
     MatFormFieldModule,
     MatSelectModule,
-    MatCardModule,
+    MatCardModule, 
     MatGridListModule,
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,ReactiveFormsModule,
-    MatIconModule
+    MatIconModule,
+    MatButtonModule
     
 
     

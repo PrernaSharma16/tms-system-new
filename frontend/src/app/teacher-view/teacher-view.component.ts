@@ -79,40 +79,80 @@ export class TeacherViewComponent {
 
  Required(fieldName:any)
  {
-    if(fieldName === 'courseid')
+    if(fieldName === 'courseid'  && !this[fieldName])
     {
       this.showCourseIdRequired = true;
     }
 
-    if(fieldName === 'coursename')
+    if(fieldName === 'coursename'  && !this[fieldName])
     {
       this.showCourseNameRequired = true;
     }
 
-    if(fieldName === 'coursedesc')
+    if(fieldName === 'coursedesc'  && !this[fieldName])
     {
       this.showCourseDescRequired = true;
     }
 
-    if(fieldName === 'trainername')
+    if(fieldName === 'trainername'  && !this[fieldName])
     {
       this.showTrainerNameRequired = true;
     }
 
-    if(fieldName === 'softwarereq')
+    if(fieldName === 'softwarereq'  && !this[fieldName])
     {
       this.showSoftwareReqRequired = true;
     }
 
-    if(fieldName === 'startdate')
+    if(fieldName === 'startdate'  && !this[fieldName])
     {
       this.showStartDateRequired = true;
     }
 
-    if(fieldName === 'enddate')
+    if(fieldName === 'enddate'  && !this[fieldName])
     {
       this.showEndDateRequired = true;
     }
+
+ }
+
+ hide(fieldName:any)
+ {
+  if(fieldName === 'courseid')
+  {
+    this.showCourseIdRequired = false; 
+  }
+
+  if(fieldName === 'coursename')
+  {
+    this.showCourseNameRequired = false;
+  }
+
+  if(fieldName === 'coursedesc')
+  {
+    this.showCourseDescRequired = false;
+  }
+
+  if(fieldName === 'trainername')
+  {
+    this.showTrainerNameRequired = false;
+  }
+
+  if(fieldName === 'softwarereq')
+  {
+    this.showSoftwareReqRequired = false;
+  }
+
+  if(fieldName === 'startdate')
+  {
+    this.showStartDateRequired = false;
+  }
+
+  if(fieldName === 'enddate')
+  {
+    this.showEndDateRequired = false;
+  }
+
 
  }
 

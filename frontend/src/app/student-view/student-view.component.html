@@ -1,4 +1,20 @@
-<app-login-header></app-login-header>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+
+
+
+<mat-toolbar color="primary" class="other-navbar" style="width: 1366px;  position: relative;">
+  <span style="margin-left: 580px; font-size: 30px;">MINDCRAFT</span>
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+
+  <i class='far fa-user-circle' data-bs-toggle="modal" data-bs-target="#example2" style='font-size:38px;color:white'></i>
+</mat-toolbar>
+
 
 <div class="table-container">
   <mat-card class="table-card">
@@ -25,7 +41,7 @@
           <td>2-2-22</td>
           <td>3-2-22</td>
           <td>
-            <button mat-mini-fab color="accent" class="circular-button">Enroll</button>
+            <button mat-raised-button color="primary">Enroll</button>
           </td>
         </tr>
       </table>
@@ -34,4 +50,37 @@
 </div>
   
 
-  <app-login-footer></app-login-footer>
+
+<div class="modal fade" id="example2" data-bs-backdrop="false">
+  <div class="modal-dialog cascading-modal modal-avatar modal-sm" role="document">
+    <!--Content-->
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header">
+        <!-- Replace the image with a user profile icon (font-awesome user icon) -->
+        <i class="fas fa-user-circle fa-4x" style="margin-left: 40%;"></i>
+      </div>
+      <!--Body-->
+      <div class="modal-body text-center mb-1">
+        <h5 class="mt-1 mb-2" style="margin-left:8%; position: relative;">Your Account</h5>
+        <!-- Your password input field remains unchanged -->
+        
+        <!-- Logout button at the bottom center -->
+        <div class="text-center mt-4" style="position:relative;">
+          <button class="btn btn-cyan mt-1 my-button" [routerLink]="['']" data-dismiss="modal">Logout <i class="fas fa-sign-out-alt ml-1"></i></button>
+          <button class="btn btn-cyan mt-1 my-button" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+
+
+
+
+
+
+<mat-toolbar color="primary" class="other-navbar" style="width: 1366px; margin-top: 6px; position: relative;">
+  <span style="margin-left: 470px; font-size: 30px;">mindcraft.in | All rights reserved</span>
+</mat-toolbar>
