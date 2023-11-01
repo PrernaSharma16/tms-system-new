@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 
@@ -34,10 +35,11 @@ public class CourseService {
     }
 
     public Map<String, Object> insertCourse(CourseView courseView) {
-        String sql = "insert into course values(?,?,?,?,?,?,?)";
+        String sql = "insert into course values(?,?,?,?,?,?,?,?)";
         int result = jdbcTemplate.update(sql,
         courseView.getCourse_id(),
         courseView.getCourse_name(),
+        courseView.getCourse_duration(),
         courseView.getCourse_desc(),
         courseView.getTrainer_name(),
         courseView.getSoftware_req(),

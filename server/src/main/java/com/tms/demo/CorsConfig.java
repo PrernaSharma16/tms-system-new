@@ -23,6 +23,11 @@ public class CorsConfig {
                         .allowedOrigins("http://localhost:4200")
                         .allowedMethods("GET", "POST")
                         .allowCredentials(true);
+                
+                registry.addMapping("/getCourse") // Add the endpoint for the student component here
+                        .allowedOrigins("http://localhost:4200")
+                        .allowedMethods("GET")
+                        .allowCredentials(true);
             }
         };
     }

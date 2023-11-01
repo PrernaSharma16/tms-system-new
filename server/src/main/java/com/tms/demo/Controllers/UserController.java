@@ -34,7 +34,7 @@ public class UserController {
             System.out.println("reached here");
             String username = userView.getUsername();
             String role = userView.getRole();
-            final String token = jwtUtil.generateToken(username, role);
+            final String token = jwtUtil.generateToken(userView.getUsername(), role);
             response.put("token", token);
             return ResponseEntity.ok(response);
         }else{
