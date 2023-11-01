@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-
+import { MatDialog } from '@angular/material/dialog';
+import { CourseService } from '../student-view/course.service';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-teacher-view',

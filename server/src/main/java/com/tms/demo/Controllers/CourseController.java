@@ -1,10 +1,12 @@
 package com.tms.demo.Controllers;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,8 +27,18 @@ public class CourseController {
 
     @RequestMapping(value = "/getCourse", method = RequestMethod.GET)
     public List<Map<String, Object>> getCourse() {
-        List<Map<String, Object>> response = courseService.getCourse();
-        return response;
+        List<Map<String, Object>> courses = courseService.getCourse();
+        Map<String, Object> response = new HashMap<>();
+        if (courses.isEmpty()) {
+            response.put("status", "error");
+            response.put("message", "no courses found");
+        } else {
+            response.put("status", "success");
+            response.put("message", "All courses displayed");
+            response.put("data", courses); // Add the courses data to the response
+        }
+        // return ResponseEntity.ok(response);
+        return courses;
     }
 
     @RequestMapping(value = "/insertCourse", method = RequestMethod.POST)

@@ -16,6 +16,9 @@ public class CourseView {
     @Column(name = "course_name")
     private String course_name;
 
+    @Column(name = "course_duration")
+    private String course_duration;
+
     @Column(name = "course_desc")
     private String course_desc;
 
@@ -35,10 +38,11 @@ public class CourseView {
 
     }
 
-    public CourseView(int course_id, String course_name, String course_desc, String trainer_name, String software_req,
+    public CourseView(int course_id, String course_name, String course_duration, String course_desc, String trainer_name, String software_req,
             Date start_date, Date end_date) {
         this.course_id = course_id;
         this.course_name = course_name;
+        this.course_duration = course_duration;
         this.course_desc = course_desc;
         this.trainer_name = trainer_name;
         this.software_req = software_req;
@@ -100,6 +104,14 @@ public class CourseView {
 
     public void setEnd_date(Date end_date) {
         this.end_date = end_date;
+    }
+
+    public String getCourse_duration() {
+        return course_duration;
+    }
+
+    public void setCourse_duration(String course_duration) {
+        this.course_duration = course_duration;
     }
     
 

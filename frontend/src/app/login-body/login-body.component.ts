@@ -33,8 +33,11 @@ export class LoginBodyComponent implements OnInit{
     const user = this.loginForm.value;
     this.http.post<any>('http://localhost:8080/login', user).subscribe(
       response => {
-        if(response.status === 'success'){
-          console.log('Login successfull');
+        if(response.token){
+          console.log('Login successfull', response);
+          console.log('Token', response.token);
+          localStorage.setItem('token', response.token);
+          localStorage.setItem('role', user.role);
           alert('Login successfull');
 
           if(user.role === 'student'){
@@ -48,6 +51,7 @@ export class LoginBodyComponent implements OnInit{
         }else{
           console.log('Login failed');
           alert('Login failed. Invalid username or password');
+          this.router.navigate(['/'])
         }
       },
       error => {

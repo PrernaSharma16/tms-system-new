@@ -31,15 +31,15 @@
           <th>End Date</th>
           <th>Action</th>
         </tr>
-        <tr class="data-row">
-          <td>1</td>
-          <td>Course 1</td>
-          <td>2 weeks</td>
-          <td>Description 1</td>
-          <td>T</td>
-          <td>s</td>
-          <td>2-2-22</td>
-          <td>3-2-22</td>
+        <tr class="data-row" *ngFor="let course of courses">
+          <td>{{course.course_id}}</td>
+          <td>{{course.course_name}}</td>
+          <td>{{course.course_duration}}</td>
+          <td>{{course.course_desc}}</td>
+          <td>{{course.trainer_name}}</td>
+          <td>{{course.software_req}}</td>
+          <td>{{course.start_date}}</td>
+          <td>{{course.end_date}}</td>
           <td>
             <button mat-raised-button color="primary">Enroll</button>
           </td>
