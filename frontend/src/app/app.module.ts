@@ -19,7 +19,8 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SampleComponent } from './sample/sample.component';
-import {MatButtonModule} from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
+import { ErrorPageComponent } from './error-page/error-page.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import {MatButtonModule} from '@angular/material/button';
     CreateUserComponent,
     StudentViewComponent,
     TeacherViewComponent,
-    SampleComponent
+    SampleComponent,
+    ErrorPageComponent
     
   ],
   imports: [
