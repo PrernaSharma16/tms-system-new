@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-teacher-view',
@@ -7,9 +8,6 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
   styleUrls: ['./teacher-view.component.css']
 })
 export class TeacherViewComponent {
-
-
- 
 
   showFirstNameRequired: boolean = false; 
   showLastNameRequired: boolean = false;
@@ -178,4 +176,13 @@ export class TeacherViewComponent {
   cancelEdit() {
     this.isEditing = false;
      }
+
+     constructor(private router: Router){}
+     logout(){
+      window.alert("Confirm logout ?");
+      localStorage.removeItem('token');
+      localStorage.removeItem('role');
+      this.router.navigate(['/login']);
+
+  }
 }

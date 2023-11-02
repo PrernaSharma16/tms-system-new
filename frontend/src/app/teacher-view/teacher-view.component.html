@@ -418,7 +418,7 @@
         
         <!-- Logout button at the bottom center -->
         <div class="text-center mt-4" style="margin-left:23%; position:relative;">
-          <button class="btn btn-cyan mt-1 my-button" [routerLink]="['']" data-dismiss="modal">Logout <i class="fas fa-sign-out-alt ml-1"></i></button>
+          <button class="btn btn-cyan mt-1 my-button" (click)="logout()" data-dismiss="modal">Logout <i class="fas fa-sign-out-alt ml-1"></i></button>
           <button class="btn btn-cyan mt-1 my-button" data-bs-dismiss="modal">Close</button>
         </div>
       </div>

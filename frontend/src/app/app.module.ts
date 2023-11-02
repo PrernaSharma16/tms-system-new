@@ -34,7 +34,8 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
     StudentViewComponent,
     TeacherViewComponent,
     SampleComponent,
-    ErrorPageComponent
+    ErrorPageComponent,
+   
     
   ],
   imports: [
