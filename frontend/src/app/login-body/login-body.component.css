@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 79%;
+  height: 79.3%;
   position: relative;
 }
 
@@ -42,6 +42,9 @@
   height: 80%;
   margin-top: -3%;
   margin-left: 68%;
+  position: relative;
+
+  
 }
 
 /* Media query for screens smaller than 992px (lg) */
@@ -66,40 +69,12 @@
     width: 100%;
     margin: 0;
   }
-}
 
-/* Media query for screens smaller than 768px (md) */
-@media (max-width: 767px) {
   .login-heading {
     margin-left: 0;
-    margin:0; /* Adjust the margin to center it on smaller screens */
-  }
-
-  /* Styles for the navigation bars (mat toolbars) */
-  
-}
-
-@media(max-width: 575px)
-{
-  .login-heading{
-   
-    margin-left: 0;
-    margin:0;
-
+    margin: 0;
   }
 }
-
-@media(max-width: 991px)
-{
-  .login-heading{
-    max-width: 100%;
-    margin-left: 0;
-    margin:0;
-
-  }
-}
-
-
 
 /* Default styles for the login heading */
 .login-heading {
@@ -144,11 +119,9 @@ button:hover {
 /* Media query for screens smaller than 992px (lg) */
 @media (max-width: 991px) {
   .other-navbar {
-    width: 100%;
     margin: 0;
   }
   .other-navbar span {
-    
     font-size: 187.5%;
   }
 }
@@ -156,11 +129,9 @@ button:hover {
 /* Media query for screens smaller than 768px (md) */
 @media (max-width: 767px) {
   .other-navbar {
-    width: 100%;
     margin: 0;
   }
   .other-navbar span {
-  
     font-size: 150%;
   }
 }
@@ -168,11 +139,9 @@ button:hover {
 /* Media query for screens smaller than 576px (sm) */
 @media (max-width: 575px) {
   .other-navbar {
-    width: 100%;
     margin: 0;
   }
   .other-navbar span {
-    
-    font-size: 125%;
+    font-size: 76%;
   }
 }
