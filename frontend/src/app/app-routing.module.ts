@@ -6,6 +6,7 @@ import { TeacherViewComponent } from './teacher-view/teacher-view.component';
 import { StudentViewComponent } from './student-view/student-view.component';
 import { SampleComponent } from './sample/sample.component';
 import { AuthGuard } from './auth.guard';
+import { ErrorPageComponent } from './error-page/error-page.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path:'teacher',component:TeacherViewComponent,canActivate: [AuthGuard], data: {role: 'teacher'}},
   {path:'student',component:StudentViewComponent, canActivate: [AuthGuard], data: {role: 'student'}},
   {path:'sample',component:SampleComponent},
+  {path:'error',component:ErrorPageComponent},
 ];
 
 @NgModule({

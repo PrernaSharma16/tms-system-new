@@ -34,9 +34,10 @@ public class UserService {
             String providedPassword = userView.getPassword();
             String providedPasswordHash = hashWithSHA256(providedPassword);
             String storedPasswordHash = (String) result.get(0).get("password");
+            String storedUserRole = (String) result.get(0).get("role");
             System.out.println("Password by user: "+providedPasswordHash);
 
-            if (providedPasswordHash.equals(storedPasswordHash)){
+            if (providedPasswordHash.equals(storedPasswordHash) && userView.getRole().equals(storedUserRole)){
             Map<String, String> response = new HashMap<>();
             response.put("status", "success");
             response.put("message", "login successful");
@@ -45,7 +46,7 @@ public class UserService {
         }
         Map<String, String> response = new HashMap<>();
         response.put("status", "error");
-        response.put("message", "login failed.Invalid username or password");
+        response.put("message", "login failed.Invalid username or password or role");
         return response;
     }
 
