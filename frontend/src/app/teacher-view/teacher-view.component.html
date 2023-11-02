@@ -177,45 +177,45 @@
       <div class="modal-body mx-3">
         <div class="md-form mb-5" >
           <i class="fas fa-tag prefix grey-text"></i>
-          <input style="position: relative;" type="text" id="courseid" (focus)="Required('courseid')" (blur)="hide('courseid')" placeholder="Course Id" class="form-control">
+          <input style="position: relative;" type="text" id="courseid" (focus)="Required('courseid')" (blur)="hideRequired('courseid')" placeholder="Course Id" class="form-control">
           <div class="text-danger" *ngIf="showCourseIdRequired" id="courseid" style="font-size: 12px;">Course Id is required.</div>
         </div>
 
         <div class="md-form mb-5">
           <i class="fas fa-user prefix grey-text"></i>
-          <input style="position: relative;" type="text" id="coursename" placeholder="Course Name" (focus)="Required('coursename')" (blur)="hide('coursename')" class="form-control">
+          <input style="position: relative;" type="text" id="coursename" placeholder="Course Name" (focus)="Required('coursename')" (blur)="hideRequired('coursename')" class="form-control">
           <div class="text-danger" *ngIf="showCourseNameRequired" id="coursename" style="font-size: 12px;">Course Name is required.</div>
         </div>
 
         <div class="md-form mb-5">
           <i class="fas fa-tag prefix grey-text"></i>
-          <input style="position: relative;" type="text" id="coursedesc" placeholder="Course Desc" (focus)="Required('coursedesc')" (blur)="hide('coursedesc')" class="form-control">
+          <input style="position: relative;" type="text" id="coursedesc" placeholder="Course Desc" (focus)="Required('coursedesc')" (blur)="hideRequired('coursedesc')" class="form-control">
           <div class="text-danger" *ngIf="showCourseDescRequired" id="coursedesc" style="font-size: 12px;">Course Desc is required.</div>
         </div>
 
         <div class="md-form mb-5">
           <i class="fas fa-user prefix grey-text"></i>
-          <input style="position: relative;" type="text" id="trainername" placeholder="Trainer Name" (focus)="Required('trainername')" (blur)="hide('trainername')" class="form-control">
+          <input style="position: relative;" type="text" id="trainername" placeholder="Trainer Name" (focus)="Required('trainername')" (blur)="hideRequired('trainername')" class="form-control">
           <div class="text-danger" *ngIf="showTrainerNameRequired" id="trainername" style="font-size: 12px;">Course Desc is required.</div>
         </div>
 
         <div class="md-form mb-5">
           <i class="fas fa-envelope prefix grey-text"></i>
-          <input style="position: relative;" type="text" id="softwarereq" placeholder="Software Req" (focus)="Required('softwarereq')" (blur)="hide('softwarereq')" class="form-control">
+          <input style="position: relative;" type="text" id="softwarereq" placeholder="Software Req" (focus)="Required('softwarereq')" (blur)="hideRequired('softwarereq')" class="form-control">
           <div class="text-danger" *ngIf="showSoftwareReqRequired" id="softwarereq" style="font-size: 12px;">Software Req is required.</div>
         </div>
 
         <div class="md-form mb-5">
           <i class="fas fa-calendar-alt prefix grey-text"></i>
           <label for="startdate">Start Date:</label>
-          <input style="position: relative;" type="date" placeholder="Start Date" (focus)="Required('startdate')" (blur)="hide('startdate')" id="startdatestartdate" class="form-control">
+          <input style="position: relative;" type="date" placeholder="Start Date" (focus)="Required('startdate')" (blur)="hideRequired('startdate')" id="startdatestartdate" class="form-control">
           <div class="text-danger" *ngIf="showStartDateRequired" id="startdate" style="font-size: 12px;">Software Req is required.</div>
         </div>
 
         <div class="md-form mb-5">
           <i class="fas fa-calendar-alt prefix grey-text"></i>
           <label for="enddate">End Date:</label>
-          <input style="position: relative;" type="date" id="enddate" (focus)="Required('enddate')" (blur)="hide('enddate')" placeholder="End Date" class="form-control">
+          <input style="position: relative;" type="date" id="enddate" (focus)="Required('enddate')" (blur)="hideRequired('enddate')" placeholder="End Date" class="form-control">
           <div class="text-danger" *ngIf="showEndDateRequired" id="startdate" style="font-size: 12px;">End Date is required.</div>
         </div>
       </div>
@@ -408,7 +408,7 @@
         
         <!-- Logout button at the bottom center -->
         <div class="text-center mt-4" style="margin-left:23%; position:relative;">
-          <button class="btn btn-cyan mt-1 my-button" [routerLink]="['']" data-dismiss="modal">Logout <i class="fas fa-sign-out-alt ml-1"></i></button>
+          <button class="btn btn-cyan mt-1 my-button" (click)="logout()" data-dismiss="modal">Logout <i class="fas fa-sign-out-alt ml-1"></i></button>
           <button class="btn btn-cyan mt-1 my-button" data-bs-dismiss="modal">Close</button>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-teacher-view',
@@ -7,9 +8,6 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
   styleUrls: ['./teacher-view.component.css']
 })
 export class TeacherViewComponent {
-
-
- 
 
   showFirstNameRequired: boolean = false; 
   showLastNameRequired: boolean = false;
@@ -119,58 +117,6 @@ export class TeacherViewComponent {
 
  }
 
- hide(fieldName:any)
- {
-  if(fieldName === 'courseid')
-  {
-    this.showCourseIdRequired = false; 
-  }
-
-  if(fieldName === 'coursename')
-  {
-    this.showCourseNameRequired = false;
-  }
-
-  if(fieldName === 'coursedesc')
-  {
-    this.showCourseDescRequired = false;
-  }
-
-  if(fieldName === 'trainername')
-  {
-    this.showTrainerNameRequired = false;
-  }
-
-  if(fieldName === 'softwarereq')
-  {
-    this.showSoftwareReqRequired = false;
-  }
-
-  if(fieldName === 'startdate')
-  {
-    this.showStartDateRequired = false;
-  }
-
-  if(fieldName === 'enddate')
-  {
-    this.showEndDateRequired = false;
-  }
-
-
- }
-
-
-
-
-
- 
-
-  
-
-
-
-  
-
   isEditing: boolean = false;
   editedFirstName: string;
   editedLastName: string;
@@ -178,8 +124,6 @@ export class TeacherViewComponent {
   editedDOB: string;
   editedRollNo: number;
   editedLocation: string;
-
-
 
   isEdit: boolean = false;
   editCourseId: string;
@@ -203,9 +147,6 @@ export class TeacherViewComponent {
     
   }
 
-  
-
-
   Edit()
   {
     this.isEdit = false;
@@ -218,8 +159,6 @@ export class TeacherViewComponent {
     
   }
 
-
-  
   startEditing() {
   
     this.isEditing = true;
@@ -227,20 +166,23 @@ export class TeacherViewComponent {
     this.editedLastName = 'Gole';
     this.editedGender = 'male';
     this.editedDOB = 'date';
-
-  
-
-
   }
 
-  
   saveEdit() {
        this.isEditing = false;
        
   }
 
-  
   cancelEdit() {
     this.isEditing = false;
      }
+
+     constructor(private router: Router){}
+     logout(){
+      window.alert("Confirm logout ?");
+      localStorage.removeItem('token');
+      localStorage.removeItem('role');
+      this.router.navigate(['/login']);
+
+  }
 }
