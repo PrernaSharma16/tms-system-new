@@ -22,6 +22,7 @@ import { SampleComponent } from './sample/sample.component';
 import { MatButtonModule } from '@angular/material/button';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { LoadingComponent } from './loading/loading.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
     StudentViewComponent,
     TeacherViewComponent,
     SampleComponent,
-    ErrorPageComponent
+    ErrorPageComponent,
+    LoadingComponent
     
   ],
   imports: [
