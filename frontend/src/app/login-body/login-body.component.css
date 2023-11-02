@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 79vh;
+  height: 79%;
   position: relative;
 }
 
@@ -35,13 +35,13 @@
 .login-card {
   background-color: white;
   border: 1px solid #ccc;
-  border-radius: 10px;
-  padding: 20px;
+  border-radius: 3%;
+  padding: 1.5%;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 410px;
+  width: 30%;
   height: 80%;
-  margin-top: -50px;
-  margin-left: 900px;
+  margin-top: -3%;
+  margin-left: 68%;
 }
 
 /* Media query for screens smaller than 992px (lg) */
@@ -71,18 +71,40 @@
 /* Media query for screens smaller than 768px (md) */
 @media (max-width: 767px) {
   .login-heading {
-    margin-left: 0; /* Adjust the margin to center it on smaller screens */
+    margin-left: 0;
+    margin:0; /* Adjust the margin to center it on smaller screens */
   }
 
   /* Styles for the navigation bars (mat toolbars) */
   
 }
 
+@media(max-width: 575px)
+{
+  .login-heading{
+   
+    margin-left: 0;
+    margin:0;
+
+  }
+}
+
+@media(max-width: 991px)
+{
+  .login-heading{
+    max-width: 100%;
+    margin-left: 0;
+    margin:0;
+
+  }
+}
+
+
+
 /* Default styles for the login heading */
 .login-heading {
-  text-align: center;
+  
   color: orange;
-  margin-left: -300px;
 }
 
 /* Default styles for input fields, text-danger, select, and button */
@@ -117,4 +139,40 @@ button {
 
 button:hover {
   background-color: #005999;
+}
+
+/* Media query for screens smaller than 992px (lg) */
+@media (max-width: 991px) {
+  .other-navbar {
+    width: 100%;
+    margin: 0;
+  }
+  .other-navbar span {
+    
+    font-size: 187.5%;
+  }
+}
+
+/* Media query for screens smaller than 768px (md) */
+@media (max-width: 767px) {
+  .other-navbar {
+    width: 100%;
+    margin: 0;
+  }
+  .other-navbar span {
+  
+    font-size: 150%;
+  }
+}
+
+/* Media query for screens smaller than 576px (sm) */
+@media (max-width: 575px) {
+  .other-navbar {
+    width: 100%;
+    margin: 0;
+  }
+  .other-navbar span {
+    
+    font-size: 125%;
+  }
 }
