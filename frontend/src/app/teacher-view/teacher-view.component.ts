@@ -118,18 +118,6 @@ export class TeacherViewComponent {
 
  }
 
-
-
-
-
- 
-
-  
-
-
-
-  
-
   isEditing: boolean = false;
   editedFirstName: string;
   editedLastName: string;
@@ -137,8 +125,6 @@ export class TeacherViewComponent {
   editedDOB: string;
   editedRollNo: number;
   editedLocation: string;
-
-
 
   isEdit: boolean = false;
   editCourseId: string;
@@ -162,9 +148,6 @@ export class TeacherViewComponent {
     
   }
 
-  
-
-
   Edit()
   {
     this.isEdit = false;
@@ -177,8 +160,6 @@ export class TeacherViewComponent {
     
   }
 
-
-  
   startEditing() {
   
     this.isEditing = true;
@@ -186,19 +167,13 @@ export class TeacherViewComponent {
     this.editedLastName = 'Gole';
     this.editedGender = 'male';
     this.editedDOB = 'date';
-
-  
-
-
   }
 
-  
   saveEdit() {
        this.isEditing = false;
        
   }
 
-  
   cancelEdit() {
     this.isEditing = false;
      }
