@@ -1,10 +1,37 @@
+/* Default styles with responsiveness for the login container */
 .login-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 76vh;
+  height: 79vh;
+  position: relative;
 }
 
+/* Media query for screens smaller than 992px (lg) */
+@media (max-width: 991px) {
+  .login-container {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+/* Media query for screens smaller than 768px (md) */
+@media (max-width: 767px) {
+  .login-container {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+/* Media query for screens smaller than 576px (sm) */
+@media (max-width: 575px) {
+  .login-container {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+/* Default styles for the login card */
 .login-card {
   background-color: white;
   border: 1px solid #ccc;
@@ -12,21 +39,57 @@
   padding: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 410px;
+  height: 80%;
   margin-top: -50px;
   margin-left: 900px;
-  height:80%;
 }
 
+/* Media query for screens smaller than 992px (lg) */
+@media (max-width: 991px) {
+  .login-card {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+/* Media query for screens smaller than 768px (md) */
+@media (max-width: 767px) {
+  .login-card {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+/* Media query for screens smaller than 576px (sm) */
+@media (max-width: 575px) {
+  .login-card {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+/* Media query for screens smaller than 768px (md) */
+@media (max-width: 767px) {
+  .login-heading {
+    margin-left: 0; /* Adjust the margin to center it on smaller screens */
+  }
+
+  /* Styles for the navigation bars (mat toolbars) */
+  
+}
+
+/* Default styles for the login heading */
 .login-heading {
   text-align: center;
-  color: orange; /* Blue font color */
-  margin-left:-300px;
+  color: orange;
+  margin-left: -300px;
 }
 
+/* Default styles for input fields, text-danger, select, and button */
 .input-field {
   margin: 10px 0;
-  position: relative; /* Add this to enable absolute positioning of error messages */
-  width:380px;
+  position: relative;
+  width: 100%; /* Adjusted width to 100% to fit within the card */
 }
 
 .text-danger {

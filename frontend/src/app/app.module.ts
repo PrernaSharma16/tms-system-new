@@ -19,6 +19,10 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SampleComponent } from './sample/sample.component';
+import { MatButtonModule } from '@angular/material/button';
+import { ErrorPageComponent } from './error-page/error-page.component';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+
 
 @NgModule({
   declarations: [
@@ -29,7 +33,8 @@ import { SampleComponent } from './sample/sample.component';
     CreateUserComponent,
     StudentViewComponent,
     TeacherViewComponent,
-    SampleComponent
+    SampleComponent,
+    ErrorPageComponent
     
   ],
   imports: [
@@ -38,12 +43,13 @@ import { SampleComponent } from './sample/sample.component';
     MatToolbarModule,
     MatFormFieldModule,
     MatSelectModule,
-    MatCardModule,
+    MatCardModule, 
     MatGridListModule,
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,ReactiveFormsModule,
-    MatIconModule
+    MatIconModule,
+    MatButtonModule
     
 
     

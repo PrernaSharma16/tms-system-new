@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
-import { CourseService } from '../student-view/course.service';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-teacher-view',
@@ -9,6 +7,9 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./teacher-view.component.css']
 })
 export class TeacherViewComponent {
+
+
+ 
 
   showFirstNameRequired: boolean = false; 
   showLastNameRequired: boolean = false;
@@ -81,37 +82,37 @@ export class TeacherViewComponent {
 
  Required(fieldName:any)
  {
-    if(fieldName === 'courseid')
+    if(fieldName === 'courseid'  && !this[fieldName])
     {
       this.showCourseIdRequired = true;
     }
 
-    if(fieldName === 'coursename')
+    if(fieldName === 'coursename'  && !this[fieldName])
     {
       this.showCourseNameRequired = true;
     }
 
-    if(fieldName === 'coursedesc')
+    if(fieldName === 'coursedesc'  && !this[fieldName])
     {
       this.showCourseDescRequired = true;
     }
 
-    if(fieldName === 'trainername')
+    if(fieldName === 'trainername'  && !this[fieldName])
     {
       this.showTrainerNameRequired = true;
     }
 
-    if(fieldName === 'softwarereq')
+    if(fieldName === 'softwarereq'  && !this[fieldName])
     {
       this.showSoftwareReqRequired = true;
     }
 
-    if(fieldName === 'startdate')
+    if(fieldName === 'startdate'  && !this[fieldName])
     {
       this.showStartDateRequired = true;
     }
 
-    if(fieldName === 'enddate')
+    if(fieldName === 'enddate'  && !this[fieldName])
     {
       this.showEndDateRequired = true;
     }

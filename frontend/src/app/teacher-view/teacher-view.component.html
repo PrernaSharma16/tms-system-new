@@ -181,84 +181,87 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+        <h4 class="modal-title w-100 font-weight-bold">Add Course</h4>
+        <i class="fas fa-times" data-bs-dismiss="modal" style="font-size:20px; color: red;"></i>
       </div>
       <div class="modal-body mx-3">
         <div class="md-form mb-5" >
           <i class="fas fa-tag prefix grey-text"></i>
-          <input type="text" id="courseid" placeholder="Course Id" class="form-control">
-          
+          <input style="position: relative;" type="text" id="courseid" (focus)="Required('courseid')" (blur)="hide('courseid')" placeholder="Course Id" class="form-control">
+          <div class="text-danger" *ngIf="showCourseIdRequired" id="courseid" style="font-size: 12px;">Course Id is required.</div>
         </div>
 
         <div class="md-form mb-5">
           <i class="fas fa-user prefix grey-text"></i>
-          <input type="text" id="coursename" placeholder="Course Name" class="form-control">
+          <input style="position: relative;" type="text" id="coursename" placeholder="Course Name" (focus)="Required('coursename')" (blur)="hide('coursename')" class="form-control">
+          <div class="text-danger" *ngIf="showCourseNameRequired" id="coursename" style="font-size: 12px;">Course Name is required.</div>
         </div>
 
         <div class="md-form mb-5">
           <i class="fas fa-tag prefix grey-text"></i>
-          <input type="text" id="coursedesc" placeholder="Course Desc" class="form-control">
+          <input style="position: relative;" type="text" id="coursedesc" placeholder="Course Desc" (focus)="Required('coursedesc')" (blur)="hide('coursedesc')" class="form-control">
+          <div class="text-danger" *ngIf="showCourseDescRequired" id="coursedesc" style="font-size: 12px;">Course Desc is required.</div>
         </div>
 
         <div class="md-form mb-5">
           <i class="fas fa-user prefix grey-text"></i>
-          <input type="text" id="trainername" placeholder="Trainer Name" class="form-control">
+          <input style="position: relative;" type="text" id="trainername" placeholder="Trainer Name" (focus)="Required('trainername')" (blur)="hide('trainername')" class="form-control">
+          <div class="text-danger" *ngIf="showTrainerNameRequired" id="trainername" style="font-size: 12px;">Course Desc is required.</div>
         </div>
 
         <div class="md-form mb-5">
           <i class="fas fa-envelope prefix grey-text"></i>
-          <input type="text" id="softwarereq" placeholder="Software Req" class="form-control">
+          <input style="position: relative;" type="text" id="softwarereq" placeholder="Software Req" (focus)="Required('softwarereq')" (blur)="hide('softwarereq')" class="form-control">
+          <div class="text-danger" *ngIf="showSoftwareReqRequired" id="softwarereq" style="font-size: 12px;">Software Req is required.</div>
         </div>
 
         <div class="md-form mb-5">
           <i class="fas fa-calendar-alt prefix grey-text"></i>
           <label for="startdate">Start Date:</label>
-          <input type="date" placeholder="Start Date" id="startdate" class="form-control">
+          <input style="position: relative;" type="date" placeholder="Start Date" (focus)="Required('startdate')" (blur)="hide('startdate')" id="startdatestartdate" class="form-control">
+          <div class="text-danger" *ngIf="showStartDateRequired" id="startdate" style="font-size: 12px;">Software Req is required.</div>
         </div>
 
         <div class="md-form mb-5">
           <i class="fas fa-calendar-alt prefix grey-text"></i>
           <label for="enddate">End Date:</label>
-          <input type="date" id="enddate" placeholder="End Date" class="form-control">
+          <input style="position: relative;" type="date" id="enddate" (focus)="Required('enddate')" (blur)="hide('enddate')" placeholder="End Date" class="form-control">
+          <div class="text-danger" *ngIf="showEndDateRequired" id="startdate" style="font-size: 12px;">End Date is required.</div>
         </div>
       </div>
       <div class="modal-footer d-flex justify-content-center">
-        <button class="btn btn-success">Add Course <i class="fas fa-user-plus ml-1"></i></button>
+        <button  class="btn btn-success">Add Course <i class="fas fa-user-plus ml-1"></i></button>
       </div>
     </div>
   </div>
 </div>
 
-<div class="modal" id="example3" data-bs-backdrop="false">
+<div class="modal fade" id="example3" data-bs-backdrop="false">
   
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       
       <div class="modal-header text-center">
         <h4 class="modal-title w-100 font-weight-bold">Add Student</h4>
-        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+        <i class="fas fa-times" data-bs-dismiss="modal" style="font-size:20px; color: red;"></i>
       </div>
       <div class="modal-body mx-3">
         <div class="md-form mb-5">
           <i class="fas fa-user prefix grey-text"></i>
-          <input type="text" id="firstname" formControlName="firstname" name="firstname" placeholder="First Name" class="form-control validate" (focus)="showRequired('firstname')" (blur)="hideRequired('firstname')" required>
+          <input style="position: relative;" type="text" id="firstname" formControlName="firstname" name="firstname" placeholder="First Name" class="form-control validate" (focus)="showRequired('firstname')" (blur)="hideRequired('firstname')" required>
           <div class="text-danger" *ngIf="showFirstNameRequired" style="font-size: 12px;">First Name is required.</div>
         </div>
 
         <div class="md-form mb-5">
           <i class="fas fa-user prefix grey-text"></i>
-          <input type="text" id="lastname" name="lastname" placeholder="Last Name" class="form-control validate" (focus)="showRequired('lastname')" (blur)="hideRequired('lastname')" required>
+          <input style="position: relative;" type="text" id="lastname" name="lastname" placeholder="Last Name" class="form-control validate" (focus)="showRequired('lastname')" (blur)="hideRequired('lastname')" required>
           <div class="text-danger" *ngIf="showLastNameRequired" id="lastname" style="font-size: 12px;">Last Name is required.</div>
         </div>
 
         <div class="md-form mb-5">
           <i class="fas fa-venus-mars prefix grey-text"></i>
           <div style="width:175%" class="custom-dropdown">
-            <select id="gender" (focus)="showRequired('gender')" (blur)="hideRequired('gender')" name="gender" class="form-control" required>
+            <select style="position: relative;" id="gender" (focus)="showRequired('gender')" (blur)="hideRequired('gender')" name="gender" class="form-control" required>
               <option value="" disabled selected>Gender</option>
               <option value="male">Male</option>
               <option value="female">Female</option>
@@ -270,24 +273,24 @@
         <div style="margin-left:-2%" class="md-form mb-5">
           <i class="fas fa-calendar-alt prefix grey-text"></i>
           <label for="dob">DOB:</label>
-          <input type="date" id="dob" (focus)="showRequired('dob')" (blur)="hideRequired('dob')"  name="dob" placeholder="DOB" class="form-control validate" required>
+          <input style="position: relative;" type="date" id="dob" (focus)="showRequired('dob')" (blur)="hideRequired('dob')"  name="dob" placeholder="DOB" class="form-control validate" required>
           <div class="text-danger" *ngIf="showDOBRequired" id="dob" style="font-size: 12px;">Date of Birth is required.</div>
         </div>
 
         <div class="md-form mb-5">
           <i class="fas fa-id-card prefix grey-text"></i>
-          <input type="text" id="rollno" (focus)="showRequired('rollno')" (blur)="hideRequired('rollno')" name="rollno" placeholder="Roll No" class="form-control validate" required>
+          <input style="position: relative;" type="text" id="rollno" (focus)="showRequired('rollno')" (blur)="hideRequired('rollno')" name="rollno" placeholder="Roll No" class="form-control validate" required>
           <div class="text-danger" *ngIf="showRollNoRequired" id="rollno" style="font-size: 12px;">Roll No is required.</div>
         </div>
 
         <div class="md-form mb-5">
           <i class="fas fa-map-marker-alt prefix grey-text"></i>
-          <input type="text" id="location" name="location" (focus)="showRequired('location')" (blur)="hideRequired('location')" placeholder="Location" class="form-control validate" required>
+          <input style="position: relative;" type="text" id="location" name="location" (focus)="showRequired('location')" (blur)="hideRequired('location')" placeholder="Location" class="form-control validate" required>
           <div class="text-danger" *ngIf="showLocationRequired" id="location" style="font-size: 12px;">Location is required.</div>
         </div>
       </div>
       <div class="modal-footer d-flex justify-content-center">
-        <button type="submit" class="btn btn-success">Add Student <i class="fas fa-user-plus ml-1"></i></button>
+        <button style="position: relative;" type="submit" class="btn btn-success">Add Student <i class="fas fa-user-plus ml-1"></i></button>
       </div>
     </div>
   </div>
@@ -299,9 +302,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header text-center">
-        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+        <i class="fas fa-times" data-bs-dismiss="modal" style="font-size:20px; margin-left:96%; color: red;"></i>
       </div>
       <div class="modal-body mx-3">
         <div class="md-form mb-5">
@@ -355,9 +356,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header text-center">
-        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+        <i class="fas fa-times" data-bs-dismiss="modal" style="font-size:20px; margin-left:96%; color: red;"></i>
       </div>
       <div class="modal-body mx-3">
         <div class="md-form mb-5">
@@ -380,7 +379,7 @@
 
         <div class="md-form mb-5">
           <i class="fas fa-calendar-alt prefix grey-text"></i>
-          <input type="text" id="dob" valu="date" class="form-control validate">
+          <input type="text" id="dob" value="date" class="form-control validate">
           <label data-error="wrong" data-success="right" for="dob">DOB</label>
         </div>
 
@@ -414,13 +413,13 @@
       </div>
       <!--Body-->
       <div class="modal-body text-center mb-1">
-        <h5 class="mt-1 mb-2">Your Account</h5>
+        <h5 class="mt-1 mb-2" style="margin-left:40%;">Your Account</h5>
         <!-- Your password input field remains unchanged -->
         
         <!-- Logout button at the bottom center -->
-        <div class="text-center mt-4">
-          <button class="btn btn-cyan mt-1" [routerLink]="['']" data-dismiss="modal">Logout <i class="fas fa-sign-out-alt ml-1"></i></button>
-          <button class="btn btn-cyan mt-1" data-bs-dismiss="modal">Close</button>
+        <div class="text-center mt-4" style="margin-left:23%; position:relative;">
+          <button class="btn btn-cyan mt-1 my-button" [routerLink]="['']" data-dismiss="modal">Logout <i class="fas fa-sign-out-alt ml-1"></i></button>
+          <button class="btn btn-cyan mt-1 my-button" data-bs-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
@@ -435,6 +434,6 @@
 
 
 
-<mat-toolbar color="primary" class="other-navbar" style="width: 1350px; margin-top: 6px;">
+<mat-toolbar color="primary" class="other-navbar" style="width: 1350px;">
   <span style="margin-left: 470px; font-size: 30px;">mindcraft.in | All rights reserved</span>
 </mat-toolbar>

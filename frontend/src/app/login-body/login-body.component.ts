@@ -2,9 +2,6 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { LoginForm } from './login-form.model';
-import { LoginService } from './login.service';
-import { StudentViewComponent } from '../student-view/student-view.component';
 
 @Component({
   selector: 'app-login-body',
@@ -15,6 +12,7 @@ import { StudentViewComponent } from '../student-view/student-view.component';
 export class LoginBodyComponent implements OnInit{
 
   loginForm: FormGroup;
+
 
   constructor(private formBuilder: FormBuilder, private http: HttpClient, private router: Router) {}
 
