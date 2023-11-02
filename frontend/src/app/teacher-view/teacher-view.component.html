@@ -13,7 +13,7 @@
 <mat-grid-list cols="2" rowHeight="560px">
   <mat-grid-tile class="tile">
     <div class="mat-grid-title-content"
-      style="margin-top: -68%; color: black; font-size: 150%; width: 5%;  margin-left:40%">
+      style="margin-top: -68%; color: black; font-size: 150%; width: 5%; position: relative;  margin-left:40%">
       AvailableStudent
     </div>
     <div class="container1">
@@ -35,18 +35,18 @@
         <tbody>
           <tr>
             <td *ngIf="!isEditing">Yash</td>
-            <td *ngIf="isEditing"><input type="text" style="width: 80px;" [(ngModel)]="editedFirstName"></td>
+            <td *ngIf="isEditing"><input type="text" style="width: 60%;" [(ngModel)]="editedFirstName"></td>
             <td *ngIf="!isEditing">male</td>
-            <td *ngIf="isEditing"><input type="text" style="width: 80px;" [(ngModel)]="editedGender"></td>
+            <td *ngIf="isEditing"><input type="text" style="width: 60%;" [(ngModel)]="editedGender"></td>
             <td *ngIf="!isEditing">date</td>
-            <td *ngIf="isEditing"><input type="text" style="width: 80px;" [(ngModel)]="editedDOB"></td>
+            <td *ngIf="isEditing"><input type="text" style="width: 60%;" [(ngModel)]="editedDOB"></td>
             <td>
               <div *ngIf="!isEditing">
                 <i class="fa fa-edit edit-icon" style="color: blue" (click)="startEditing()"></i>
                 &nbsp;
                 <i class="fa fa-trash trash-icon" style="color: red"></i>
                 &nbsp;
-                <i class="fa fa-eye" data-bs-toggle="modal" data-bs-target="#example5" style="font-size: 18px; color: red"></i>
+                <i class="fa fa-eye" data-bs-toggle="modal" data-bs-target="#example5" style="font-size: 120%; color: red"></i>
               </div>
               <div *ngIf="isEditing" class="update-button-expanded">
                 <i class="fa fa-check check-icon" style="color: green" (click)="saveEdit()"></i>
@@ -57,18 +57,18 @@
           </tr>
           <tr>
             <td *ngIf="!isEditing">Yash</td>
-            <td *ngIf="isEditing"><input type="text" style="width: 80px;" [(ngModel)]="editedFirstName"></td>
+            <td *ngIf="isEditing"><input type="text" style="width: 60%;" [(ngModel)]="editedFirstName"></td>
             <td *ngIf="!isEditing">male</td>
-            <td *ngIf="isEditing"><input type="text" style="width: 80px;" [(ngModel)]="editedGender"></td>
+            <td *ngIf="isEditing"><input type="text" style="width: 60%" [(ngModel)]="editedGender"></td>
             <td *ngIf="!isEditing">date</td>
-            <td *ngIf="isEditing"><input type="text" style="width: 80px;" [(ngModel)]="editedDOB"></td>
+            <td *ngIf="isEditing"><input type="text" style="width: 60%" [(ngModel)]="editedDOB"></td>
             <td>
               <div *ngIf="!isEditing">
                 <i class="fa fa-edit edit-icon" style="color: blue" (click)="startEditing()"></i>
                 &nbsp;
                 <i class="fa fa-trash trash-icon" style="color: red"></i>
                 &nbsp;
-                <i class="fa fa-eye" data-bs-toggle="modal" data-bs-target="#example5" style="font-size: 18px; color: red"></i>
+                <i class="fa fa-eye" data-bs-toggle="modal" data-bs-target="#example5" style="font-size: 120%; color: red"></i>
               </div>
               <div *ngIf="isEditing" class="update-button-expanded">
                 <i class="fa fa-check check-icon" style="color: green" (click)="saveEdit()"></i>
@@ -85,15 +85,10 @@
     </div>
   </mat-grid-tile>
   <mat-grid-tile class="tile">
-    <div class="mat-grid-title-content" style="margin-top: -460px; font-size: 20px; color: black; margin-left:180px">
+    <div class="mat-grid-title-content" style="margin-top: -68%; font-size: 150%; position: relative; color: black; margin-left:15%">
      Available Courses
     </div>
     <div class="container2">
-      &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
-      &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;
       <table class="table">
         <thead>
           <tr>
@@ -163,7 +158,7 @@
           
         </tbody>
       </table>
-      <button class="action-button" data-bs-toggle="modal" data-bs-target="#exampleModal" style="margin-left: 88%; margin-top: 3%;"
+      <button class="action-button" data-bs-toggle="modal" data-bs-target="#exampleModal" style="margin-left: 88%; position:relative; margin-top: 3%;"
         color="primary">Add</button>
 
     </div>

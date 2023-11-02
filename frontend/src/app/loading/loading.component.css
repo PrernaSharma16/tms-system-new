@@ -2,13 +2,14 @@ bodY {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: white;
   }
   .center {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #000;
+    background: rgb(22, 22, 22);
   }
   .wave {
     width: 5px;
