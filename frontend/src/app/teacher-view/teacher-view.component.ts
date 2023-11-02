@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
-import { CourseService } from '../student-view/course.service';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-teacher-view',
@@ -9,6 +7,9 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./teacher-view.component.css']
 })
 export class TeacherViewComponent {
+
+
+ 
 
   showFirstNameRequired: boolean = false; 
   showLastNameRequired: boolean = false;

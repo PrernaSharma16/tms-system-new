@@ -21,6 +21,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { SampleComponent } from './sample/sample.component';
 import { MatButtonModule } from '@angular/material/button';
 import { ErrorPageComponent } from './error-page/error-page.component';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+
 
 @NgModule({
   declarations: [
