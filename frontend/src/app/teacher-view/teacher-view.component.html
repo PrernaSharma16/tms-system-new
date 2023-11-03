@@ -1,12 +1,7 @@
-<mat-toolbar color="primary" class="other-navbar" style="width: 1350px;">
-  <span style="margin-left: 580px; font-size: 30px;">MINDCRAFT</span>
-  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
-  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
-  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
-  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+<mat-toolbar color="primary" class="other-navbar" style="width: 100%;">
+  <span style="margin-left: 43%;  width:100%; font-size: 130%;">MINDCRAFT</span>
 
-  <i class='far fa-user-circle' data-bs-toggle="modal" data-bs-target="#example2" style='font-size:38px;color:white'></i>
+  <i class='far fa-user-circle' data-bs-toggle="modal" data-bs-target="#example2" style='font-size:200%;color:white'></i>
 </mat-toolbar>
 
 
@@ -18,7 +13,7 @@
 <mat-grid-list cols="2" rowHeight="560px">
   <mat-grid-tile class="tile">
     <div class="mat-grid-title-content"
-      style="margin-top: -460px; color: black; font-size: 20px; width: 40px;  margin-left:300px">
+      style="margin-top: -68%; color: black; font-size: 150%; width: 5%; position: relative;  margin-left:40%">
       AvailableStudent
     </div>
     <div class="container1">
@@ -40,18 +35,18 @@
         <tbody>
           <tr>
             <td *ngIf="!isEditing">Yash</td>
-            <td *ngIf="isEditing"><input type="text" style="width: 80px;" [(ngModel)]="editedFirstName"></td>
+            <td *ngIf="isEditing"><input type="text" style="width: 60%;" [(ngModel)]="editedFirstName"></td>
             <td *ngIf="!isEditing">male</td>
-            <td *ngIf="isEditing"><input type="text" style="width: 80px;" [(ngModel)]="editedGender"></td>
+            <td *ngIf="isEditing"><input type="text" style="width: 60%;" [(ngModel)]="editedGender"></td>
             <td *ngIf="!isEditing">date</td>
-            <td *ngIf="isEditing"><input type="text" style="width: 80px;" [(ngModel)]="editedDOB"></td>
+            <td *ngIf="isEditing"><input type="text" style="width: 60%;" [(ngModel)]="editedDOB"></td>
             <td>
               <div *ngIf="!isEditing">
                 <i class="fa fa-edit edit-icon" style="color: blue" (click)="startEditing()"></i>
                 &nbsp;
                 <i class="fa fa-trash trash-icon" style="color: red"></i>
                 &nbsp;
-                <i class="fa fa-eye" data-bs-toggle="modal" data-bs-target="#example5" style="font-size: 18px; color: red"></i>
+                <i class="fa fa-eye" data-bs-toggle="modal" data-bs-target="#example5" style="font-size: 120%; color: red"></i>
               </div>
               <div *ngIf="isEditing" class="update-button-expanded">
                 <i class="fa fa-check check-icon" style="color: green" (click)="saveEdit()"></i>
@@ -62,18 +57,18 @@
           </tr>
           <tr>
             <td *ngIf="!isEditing">Yash</td>
-            <td *ngIf="isEditing"><input type="text" style="width: 80px;" [(ngModel)]="editedFirstName"></td>
+            <td *ngIf="isEditing"><input type="text" style="width: 60%;" [(ngModel)]="editedFirstName"></td>
             <td *ngIf="!isEditing">male</td>
-            <td *ngIf="isEditing"><input type="text" style="width: 80px;" [(ngModel)]="editedGender"></td>
+            <td *ngIf="isEditing"><input type="text" style="width: 60%" [(ngModel)]="editedGender"></td>
             <td *ngIf="!isEditing">date</td>
-            <td *ngIf="isEditing"><input type="text" style="width: 80px;" [(ngModel)]="editedDOB"></td>
+            <td *ngIf="isEditing"><input type="text" style="width: 60%" [(ngModel)]="editedDOB"></td>
             <td>
               <div *ngIf="!isEditing">
                 <i class="fa fa-edit edit-icon" style="color: blue" (click)="startEditing()"></i>
                 &nbsp;
                 <i class="fa fa-trash trash-icon" style="color: red"></i>
                 &nbsp;
-                <i class="fa fa-eye" data-bs-toggle="modal" data-bs-target="#example5" style="font-size: 18px; color: red"></i>
+                <i class="fa fa-eye" data-bs-toggle="modal" data-bs-target="#example5" style="font-size: 120%; color: red"></i>
               </div>
               <div *ngIf="isEditing" class="update-button-expanded">
                 <i class="fa fa-check check-icon" style="color: green" (click)="saveEdit()"></i>
@@ -90,15 +85,10 @@
     </div>
   </mat-grid-tile>
   <mat-grid-tile class="tile">
-    <div class="mat-grid-title-content" style="margin-top: -460px; font-size: 20px; color: black; margin-left:180px">
+    <div class="mat-grid-title-content" style="margin-top: -68%; font-size: 150%; position: relative; color: black; margin-left:15%">
      Available Courses
     </div>
     <div class="container2">
-      &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
-      &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;
       <table class="table">
         <thead>
           <tr>
@@ -168,7 +158,7 @@
           
         </tbody>
       </table>
-      <button class="action-button" data-bs-toggle="modal" data-bs-target="#exampleModal" style="margin-left: 88%; margin-top: 3%;"
+      <button class="action-button" data-bs-toggle="modal" data-bs-target="#exampleModal" style="margin-left: 88%; position:relative; margin-top: 3%;"
         color="primary">Add</button>
 
     </div>
@@ -181,61 +171,56 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <button style="position: relative;" type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+        <h4 class="modal-title w-100 font-weight-bold">Add Course</h4>
+        <i class="fas fa-times" data-bs-dismiss="modal" style="font-size:20px; color: red;"></i>
       </div>
       <div class="modal-body mx-3">
         <div class="md-form mb-5" >
           <i class="fas fa-tag prefix grey-text"></i>
-          <input style="position: relative;" type="text" id="courseid" (focus)="Required('courseid')" (blur)="hide('courseid')" placeholder="Course Id" class="form-control">
+          <input style="position: relative;" type="text" id="courseid" (focus)="Required('courseid')" (blur)="hideRequired('courseid')" placeholder="Course Id" class="form-control">
           <div class="text-danger" *ngIf="showCourseIdRequired" id="courseid" style="font-size: 12px;">Course Id is required.</div>
         </div>
 
         <div class="md-form mb-5">
           <i class="fas fa-user prefix grey-text"></i>
-          <input style="position: relative;" type="text" id="coursename" placeholder="Course Name" (focus)="Required('coursename')" (blur)="hide('coursename')" class="form-control">
+          <input style="position: relative;" type="text" id="coursename" placeholder="Course Name" (focus)="Required('coursename')" (blur)="hideRequired('coursename')" class="form-control">
           <div class="text-danger" *ngIf="showCourseNameRequired" id="coursename" style="font-size: 12px;">Course Name is required.</div>
         </div>
 
         <div class="md-form mb-5">
           <i class="fas fa-tag prefix grey-text"></i>
-          <input style="position: relative;" type="text" id="coursedesc" placeholder="Course Desc" (focus)="Required('coursedesc')" (blur)="hide('coursedesc')" class="form-control">
+          <input style="position: relative;" type="text" id="coursedesc" placeholder="Course Desc" (focus)="Required('coursedesc')" (blur)="hideRequired('coursedesc')" class="form-control">
           <div class="text-danger" *ngIf="showCourseDescRequired" id="coursedesc" style="font-size: 12px;">Course Desc is required.</div>
         </div>
 
         <div class="md-form mb-5">
           <i class="fas fa-user prefix grey-text"></i>
-          <input style="position: relative;" type="text" id="trainername" placeholder="Trainer Name" (focus)="Required('trainername')" (blur)="hide('trainername')" class="form-control">
+          <input style="position: relative;" type="text" id="trainername" placeholder="Trainer Name" (focus)="Required('trainername')" (blur)="hideRequired('trainername')" class="form-control">
           <div class="text-danger" *ngIf="showTrainerNameRequired" id="trainername" style="font-size: 12px;">Course Desc is required.</div>
         </div>
 
         <div class="md-form mb-5">
           <i class="fas fa-envelope prefix grey-text"></i>
-          <input style="position: relative;" type="text" id="softwarereq" placeholder="Software Req" (focus)="Required('softwarereq')" (blur)="hide('softwarereq')" class="form-control">
+          <input style="position: relative;" type="text" id="softwarereq" placeholder="Software Req" (focus)="Required('softwarereq')" (blur)="hideRequired('softwarereq')" class="form-control">
           <div class="text-danger" *ngIf="showSoftwareReqRequired" id="softwarereq" style="font-size: 12px;">Software Req is required.</div>
         </div>
 
         <div class="md-form mb-5">
           <i class="fas fa-calendar-alt prefix grey-text"></i>
           <label for="startdate">Start Date:</label>
-          <input style="position: relative;" type="date" placeholder="Start Date" (focus)="Required('startdate')" (blur)="hide('startdate')" id="startdatestartdate" class="form-control">
+          <input style="position: relative;" type="date" placeholder="Start Date" (focus)="Required('startdate')" (blur)="hideRequired('startdate')" id="startdatestartdate" class="form-control">
           <div class="text-danger" *ngIf="showStartDateRequired" id="startdate" style="font-size: 12px;">Software Req is required.</div>
         </div>
 
         <div class="md-form mb-5">
           <i class="fas fa-calendar-alt prefix grey-text"></i>
           <label for="enddate">End Date:</label>
-          <input style="position: relative;" type="date" id="enddate" (focus)="Required('enddate')" (blur)="hide('enddate')" placeholder="End Date" class="form-control">
+          <input style="position: relative;" type="date" id="enddate" (focus)="Required('enddate')" (blur)="hideRequired('enddate')" placeholder="End Date" class="form-control">
           <div class="text-danger" *ngIf="showEndDateRequired" id="startdate" style="font-size: 12px;">End Date is required.</div>
         </div>
       </div>
       <div class="modal-footer d-flex justify-content-center">
-<<<<<<< HEAD
         <button  class="btn btn-success">Add Course <i class="fas fa-user-plus ml-1"></i></button>
-=======
-        <button class="btn btn-success">Add Course <i class="fas fa-user-plus ml-1"></i></button>
->>>>>>> 08cd0629b0072476f8382e54950895bb5f5dd92b
       </div>
     </div>
   </div>
@@ -248,9 +233,7 @@
       
       <div class="modal-header text-center">
         <h4 class="modal-title w-100 font-weight-bold">Add Student</h4>
-        <button style="position: relative;" type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+        <i class="fas fa-times" data-bs-dismiss="modal" style="font-size:20px; color: red;"></i>
       </div>
       <div class="modal-body mx-3">
         <div class="md-form mb-5">
@@ -386,7 +369,7 @@
 
         <div class="md-form mb-5">
           <i class="fas fa-calendar-alt prefix grey-text"></i>
-          <input type="text" id="dob" valu="date" class="form-control validate">
+          <input type="text" id="dob" value="date" class="form-control validate">
           <label data-error="wrong" data-success="right" for="dob">DOB</label>
         </div>
 
@@ -425,7 +408,7 @@
         
         <!-- Logout button at the bottom center -->
         <div class="text-center mt-4" style="margin-left:23%; position:relative;">
-          <button class="btn btn-cyan mt-1 my-button" [routerLink]="['']" data-dismiss="modal">Logout <i class="fas fa-sign-out-alt ml-1"></i></button>
+          <button class="btn btn-cyan mt-1 my-button" (click)="logout()" data-dismiss="modal">Logout <i class="fas fa-sign-out-alt ml-1"></i></button>
           <button class="btn btn-cyan mt-1 my-button" data-bs-dismiss="modal">Close</button>
         </div>
       </div>
@@ -441,6 +424,6 @@
 
 
 
-<mat-toolbar color="primary" class="other-navbar" style="width: 1350px; margin-top: 6px;">
-  <span style="margin-left: 470px; font-size: 30px;">mindcraft.in | All rights reserved</span>
+<mat-toolbar color="primary" class="other-navbar" style="width: 100%;">
+  <span style="margin-left: 34%;  width:100%; font-size: 130%;">mindcraft.in | All rights reserved</span>
 </mat-toolbar>

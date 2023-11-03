@@ -1,32 +1,92 @@
+/* Default styles with responsiveness for the login container */
 .login-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 76vh;
+  height: 79.3%;
+  position: relative;
 }
 
+/* Media query for screens smaller than 992px (lg) */
+@media (max-width: 991px) {
+  .login-container {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+/* Media query for screens smaller than 768px (md) */
+@media (max-width: 767px) {
+  .login-container {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+/* Media query for screens smaller than 576px (sm) */
+@media (max-width: 575px) {
+  .login-container {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+/* Default styles for the login card */
 .login-card {
   background-color: white;
   border: 1px solid #ccc;
-  border-radius: 10px;
-  padding: 20px;
+  border-radius: 3%;
+  padding: 1.5%;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 410px;
-  margin-top: -50px;
-  margin-left: 900px;
-  height:80%;
+  width: 30%;
+  height: 80%;
+  margin-top: -3%;
+  margin-left: 68%;
+  position: relative;
+
+  
 }
 
+/* Media query for screens smaller than 992px (lg) */
+@media (max-width: 991px) {
+  .login-card {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+/* Media query for screens smaller than 768px (md) */
+@media (max-width: 767px) {
+  .login-card {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+/* Media query for screens smaller than 576px (sm) */
+@media (max-width: 575px) {
+  .login-card {
+    width: 100%;
+    margin: 0;
+  }
+
+  .login-heading {
+    margin-left: 0;
+    margin: 0;
+  }
+}
+
+/* Default styles for the login heading */
 .login-heading {
-  text-align: center;
-  color: orange; /* Blue font color */
-  margin-left:-300px;
+  
+  color: orange;
 }
 
+/* Default styles for input fields, text-danger, select, and button */
 .input-field {
   margin: 10px 0;
-  position: relative; /* Add this to enable absolute positioning of error messages */
-  width:380px;
+  position: relative;
+  width: 100%; /* Adjusted width to 100% to fit within the card */
 }
 
 .text-danger {
@@ -54,4 +114,34 @@ button {
 
 button:hover {
   background-color: #005999;
+}
+
+/* Media query for screens smaller than 992px (lg) */
+@media (max-width: 991px) {
+  .other-navbar {
+    margin: 0;
+  }
+  .other-navbar span {
+    font-size: 187.5%;
+  }
+}
+
+/* Media query for screens smaller than 768px (md) */
+@media (max-width: 767px) {
+  .other-navbar {
+    margin: 0;
+  }
+  .other-navbar span {
+    font-size: 150%;
+  }
+}
+
+/* Media query for screens smaller than 576px (sm) */
+@media (max-width: 575px) {
+  .other-navbar {
+    margin: 0;
+  }
+  .other-navbar span {
+    font-size: 76%;
+  }
 }

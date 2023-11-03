@@ -4,16 +4,12 @@
 
 
 
-<mat-toolbar color="primary" class="other-navbar" style="width: 1366px;  position: relative;">
-  <span style="margin-left: 580px; font-size: 30px;">MINDCRAFT</span>
-  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
-  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
-  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
-  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+<mat-toolbar color="primary" class="other-navbar" style="width: 100%;">
+  <span style="margin-left: 43%;  width:100%; font-size: 130%;">MINDCRAFT</span>
 
-  <i class='far fa-user-circle' data-bs-toggle="modal" data-bs-target="#example2" style='font-size:38px;color:white'></i>
+  <i class='far fa-user-circle' data-bs-toggle="modal" data-bs-target="#example2" style='font-size:200%;color:white'></i>
 </mat-toolbar>
+
 
 
 <div class="table-container">
@@ -41,7 +37,7 @@
           <td>{{course.start_date}}</td>
           <td>{{course.end_date}}</td>
           <td>
-            <button mat-raised-button color="primary">Enroll</button>
+            <button mat-raised-button color="primary" style="position: relative;">Enroll</button>
           </td>
         </tr>
       </table>
@@ -67,7 +63,7 @@
         
         <!-- Logout button at the bottom center -->
         <div class="text-center mt-4" style="position:relative;">
-          <button class="btn btn-cyan mt-1 my-button" [routerLink]="['']" data-dismiss="modal">Logout <i class="fas fa-sign-out-alt ml-1"></i></button>
+          <button class="btn btn-cyan mt-1 my-button" (click)="logout()" data-dismiss="modal">Logout <i class="fas fa-sign-out-alt ml-1"></i></button>
           <button class="btn btn-cyan mt-1 my-button" data-bs-dismiss="modal">Close</button>
         </div>
       </div>
@@ -81,6 +77,6 @@
 
 
 
-<mat-toolbar color="primary" class="other-navbar" style="width: 1366px; margin-top: 6px; position: relative;">
-  <span style="margin-left: 470px; font-size: 30px;">mindcraft.in | All rights reserved</span>
+<mat-toolbar color="primary" class="other-navbar" style="width: 100%;">
+  <span style="margin-left: 34%;  width:100%; font-size: 130%;">mindcraft.in | All rights reserved</span>
 </mat-toolbar>
