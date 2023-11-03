@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 export class LoginBodyComponent implements OnInit{
 
   loginForm: FormGroup;
+  isLoading = false;
 
 
   constructor(private formBuilder: FormBuilder, private http: HttpClient, private router: Router) {}
@@ -28,6 +29,8 @@ export class LoginBodyComponent implements OnInit{
     if (this.loginForm.invalid){
       return;
     }
+    this.isLoading = true;
+
     const user = this.loginForm.value;
     this.http.post<any>('http://localhost:8080/login', user).subscribe(
       response => {
@@ -36,7 +39,7 @@ export class LoginBodyComponent implements OnInit{
           console.log('Token', response.token);
           localStorage.setItem('token', response.token);
           localStorage.setItem('role', user.role);
-          alert('Login successfull');
+          //alert('Login successfull');
 
           if(user.role === 'student'){
             this.router.navigate(['student']);
@@ -51,9 +54,12 @@ export class LoginBodyComponent implements OnInit{
           alert('Login failed. Invalid username or password');
           this.router.navigate(['/'])
         }
+
+        this.isLoading = false;
       },
       error => {
         alert('An error occurred while processing your request');
+        this.isLoading = false;
       }
     );
   }

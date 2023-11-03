@@ -2,6 +2,9 @@
   <span style="margin-left: 43%;  width:100%; font-size: 130%;">MINDCRAFT</span>
 </mat-toolbar>
 
+<!-- Add the loader component here -->
+<app-loading *ngIf="isLoading"></app-loading>
+<!-- The loader will only be displayed when isLoading is true -->
 
 
 <div class="login-container">
@@ -27,6 +30,7 @@
         </div>
       </div><br>
       <button type="submit" (click)="onSubmit()">Login</button><br><br>
+      
     </form>
   </div>
 </div>

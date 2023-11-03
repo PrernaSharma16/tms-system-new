@@ -36,6 +36,7 @@ import { LoadingComponent } from './loading/loading.component';
     TeacherViewComponent,
     SampleComponent,
     ErrorPageComponent,
+    LoadingComponent
    
     
   ],
