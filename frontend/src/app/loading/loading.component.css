@@ -25,10 +25,10 @@ bodY {
     border-radius: 20px;
   }
   .wave:nth-child(2) {
-    animation-delay: 0.1s;
+    animation-delay:2s;
   }
   .wave:nth-child(3) {
-    animation-delay: 0.2s;
+    animation-delay:3s;
   }
   .wave:nth-child(4) {
     animation-delay: 0.3s;
@@ -88,7 +88,7 @@ bodY {
   }
   
   /* Media query for larger screens */
-  @media (max-width: 1200px) {
+  @media (max-width: 992px) {
     .wave {
       height: 15%; /* Adjust height for larger screens */
       margin: 3%; /* Adjust margin for larger screens */
@@ -97,5 +97,17 @@ bodY {
     .loading-message {
       font-size: 8%; /* Adjust font size for larger screens */
       margin-top: 15%; /* Adjust margin-top for larger screens */
+    }
+  }
+
+  @media (max-width: 575px) {
+    .wave {
+      height: 3%; /* Adjust height for screens with a maximum width of 575px */
+      margin: 1%; /* Adjust margin for screens with a maximum width of 575px */
+    }
+  
+    .loading-message {
+      font-size: 3%; /* Adjust font size for screens with a maximum width of 575px */
+      margin-top: 5%; /* Adjust margin-top for screens with a maximum width of 575px */
     }
   }

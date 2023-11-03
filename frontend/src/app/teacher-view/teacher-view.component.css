@@ -2,6 +2,13 @@
   background: white;
 }
 
+.md-form mb-5
+{
+  display:flex;
+  justify-content: space-between;
+  position: relative;
+}
+
 .container1 {
   background-color: white;
   height: 60%;
@@ -102,10 +109,44 @@
   width: 100%;
   height: 100%;
   max-height: 100%;
+  justify-content: space-between;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.7);
   
+  
 }
+
+
+
+
+
+
+
+/* Reduce the font size for input fields in the modal */
+.modal .md-form .form-control {
+  font-size: 90%; /* Adjust the font size as a percentage */
+  padding: 2%; /* Adjust the padding as a percentage */
+
+
+}
+
+/* Reduce the font size for labels in the modal */
+.modal .md-form .form-group label {
+  font-size: 90%; /* Adjust the font size as a percentage */
+  /* Adjust the margin as a percentage */
+  margin-bottom: 5%;
+  max-width: 100%;
+}
+
+/* Optionally, adjust the font size for error messages */
+.modal .modal-body .text-danger {
+  font-size: 70%; /* Adjust the font size for error messages as a percentage */
+  /* You can adjust other properties as needed */
+}
+
+
+
+
 
 .custom-dropdown select {
   background-color: transparent; /* Make the background transparent */
@@ -134,20 +175,21 @@
 
 /* Adjust the font size and padding for form elements as needed */
 .md-form .form-group label {
-  font-size: 14px;
-  margin-bottom: 5px;
+  font-size: 17px;
+  margin-bottom: 7px;
   position: relative;
 }
 
 .md-form .form-control {
-  padding: 10px;
-  font-size: 14px;
+  padding: 12px;
+  font-size: 16px;
   position: relative;
 }
 
 .text-danger {
-  font-size: 12px; /* Set the font size for text-danger messages */
+  font-size: 16px; /* Set the font size for text-danger messages */
   margin-bottom: 0; /* Remove the margin at the bottom of text-danger messages */
+  position: absolute;
 }
 
 /* Media query for screens smaller than 480px (e.g., smartphones) */
