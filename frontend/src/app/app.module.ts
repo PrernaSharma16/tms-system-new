@@ -21,7 +21,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { SampleComponent } from './sample/sample.component';
 import { MatButtonModule } from '@angular/material/button';
 import { ErrorPageComponent } from './error-page/error-page.component';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { LoadingComponent } from './loading/loading.component';
+import {MatDividerModule} from '@angular/material/divider';
 
 
 @NgModule({
@@ -51,7 +53,8 @@ import { LoadingComponent } from './loading/loading.component';
     FormsModule,
     BrowserAnimationsModule,ReactiveFormsModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDividerModule
     
 
     
