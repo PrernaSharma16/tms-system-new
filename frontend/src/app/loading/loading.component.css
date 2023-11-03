@@ -1,19 +1,25 @@
 bodY {
+    display:flex;
+    position: relative;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: white;
   }
   .center {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #000;
+    background: white(22, 22, 22);
   }
   .wave {
+    display:flex;
+    position: relative;
     width: 5px;
     height: 100px;
-    background: linear-gradient(45deg, cyan, #fff);
+    background: linear-gradient(45deg, blue, black
+    );
     margin: 10px;
     animation: wave 1s linear infinite;
     border-radius: 20px;
@@ -55,5 +61,41 @@ bodY {
     }
     100% {
       transform: scale(0);
+    }
+  }
+
+  .loading-message {
+    display:flex;
+    text-align: center;
+    font-size: 200%;
+    color: #333; /* Choose a suitable color */
+    margin-top: 15%;
+    margin-left:-13%;
+    position: relative;
+  }
+
+
+  @media (max-width: 768px) {
+    .wave {
+      height: 5%; /* Adjust height for smaller screens */
+      margin: 1%; /* Adjust margin for smaller screens */
+    }
+  
+    .loading-message {
+      font-size: 4%; /* Adjust font size for smaller screens */
+      margin-top: 5%; /* Adjust margin-top for smaller screens */
+    }
+  }
+  
+  /* Media query for larger screens */
+  @media (max-width: 1200px) {
+    .wave {
+      height: 15%; /* Adjust height for larger screens */
+      margin: 3%; /* Adjust margin for larger screens */
+    }
+  
+    .loading-message {
+      font-size: 8%; /* Adjust font size for larger screens */
+      margin-top: 15%; /* Adjust margin-top for larger screens */
     }
   }
