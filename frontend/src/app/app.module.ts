@@ -21,7 +21,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { SampleComponent } from './sample/sample.component';
 import { MatButtonModule } from '@angular/material/button';
 import { ErrorPageComponent } from './error-page/error-page.component';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { LoadingComponent } from './loading/loading.component';
 
 
@@ -36,6 +35,7 @@ import { LoadingComponent } from './loading/loading.component';
     TeacherViewComponent,
     SampleComponent,
     ErrorPageComponent,
+    LoadingComponent
    
     
   ],
