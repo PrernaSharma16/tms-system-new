@@ -180,43 +180,43 @@
       <div class="modal-body mx-3" style="display: flex; justify-content: space-between;">
         <div class="md-form mb-5">
           <i class="fas fa-tag prefix grey-text"></i>
-          <input  type="text" id="courseid" (focus)="Required('courseid')" (blur)="hideRequired('courseid')" placeholder="Course Id" class="form-control">
-          <div class="text-danger" *ngIf="showCourseIdRequired" id="courseid" style="font-size: 12px;">Course Id is required.</div>
+          <input  type="text" id="courseid" placeholder="Course Id" class="form-control">
+          <div class="text-danger" *ngIf="requiredFields.courseid" id="courseid" style="font-size: 12px;">Course Id is required.</div>
         </div>
 
         <div class="md-form mb-5">
           <i class="fas fa-user prefix grey-text"></i>
-          <input type="text" id="coursename" placeholder="Course Name" (focus)="Required('coursename')" (blur)="hideRequired('coursename')" class="form-control">
-          <div class="text-danger" *ngIf="showCourseNameRequired" id="coursename" style="font-size: 12px;">Course Name is required.</div>
+          <input type="text" id="coursename" placeholder="Course Name" class="form-control">
+          <div class="text-danger" *ngIf="requiredFields.coursename" id="coursename" style="font-size: 12px;">Course Name is required.</div>
         </div>
         </div>
 
         <div class="modal-body mx-3" style="display: flex; justify-content: space-between;">
         <div class="md-form mb-5">
           <i class="fas fa-tag prefix grey-text"></i>
-          <input  type="text" id="coursedesc" placeholder="Course Desc" (focus)="Required('coursedesc')" (blur)="hideRequired('coursedesc')" class="form-control">
-          <div class="text-danger" *ngIf="showCourseDescRequired" id="coursedesc" style="font-size: 12px;">Course Desc is required.</div>
+          <input  type="text" id="coursedesc" placeholder="Course Desc" class="form-control">
+          <div class="text-danger" *ngIf="requiredFields.coursedesc" id="coursedesc" style="font-size: 12px;">Course Desc is required.</div>
         </div>
 
         <div class="md-form mb-5">
           <i class="fas fa-user prefix grey-text"></i>
-          <input type="text" id="trainername" placeholder="Trainer Name" (focus)="Required('trainername')" (blur)="hideRequired('trainername')" class="form-control">
-          <div class="text-danger" *ngIf="showTrainerNameRequired" id="trainername" style="font-size: 12px;">Course Desc is required.</div>
+          <input type="text" id="trainername" placeholder="Trainer Name" class="form-control">
+          <div class="text-danger" *ngIf="requiredFields.trainername" id="trainername" style="font-size: 12px;">Course Desc is required.</div>
         </div>
         </div>
 
         <div class="modal-body mx-3" style="display: flex; justify-content: space-between;">
         <div class="md-form mb-5">
           <i class="fas fa-envelope prefix grey-text"></i>
-          <input type="text" id="softwarereq" placeholder="Software Req" (focus)="Required('softwarereq')" (blur)="hideRequired('softwarereq')" class="form-control">
-          <div class="text-danger" *ngIf="showSoftwareReqRequired" id="softwarereq" style="font-size: 12px;">Software Req is required.</div>
+          <input type="text" id="softwarereq" placeholder="Software Req" class="form-control">
+          <div class="text-danger" *ngIf="requiredFields.softwarereq" id="softwarereq" style="font-size: 12px;">Software Req is required.</div>
         </div>
 
         <div class="md-form mb-5">
           <i class="fas fa-calendar-alt prefix grey-text" style="margin-left:-25%"></i>
           <label for="startdate">Start Date:</label>
-          <input type="date" style="margin-left:-25%" placeholder="Start Date" (focus)="Required('startdate')" (blur)="hideRequired('startdate')" id="startdatestartdate" class="form-control">
-          <div class="text-danger" *ngIf="showStartDateRequired" id="startdate" style="font-size: 12px;">Software Req is required.</div>
+          <input type="date" style="margin-left:-25%" placeholder="Start Date"  id="startdatestartdate" class="form-control">
+          <div class="text-danger" *ngIf="requiredFields.startdate" id="startdate" style="font-size: 12px;">Software Req is required.</div>
         </div>
         </div>
 
@@ -225,8 +225,8 @@
         <div class="md-form mb-5">
           <i class="fas fa-calendar-alt prefix grey-text"></i>
           <label for="enddate">End Date:</label>
-          <input type="date" id="enddate" (focus)="Required('enddate')" (blur)="hideRequired('enddate')" placeholder="End Date" class="form-control">
-          <div class="text-danger" *ngIf="showEndDateRequired" id="startdate" style="font-size: 12px;">End Date is required.</div>
+          <input type="date" id="enddate" placeholder="End Date" class="form-control">
+          <div class="text-danger" *ngIf="requiredFields.enddate" id="startdate" style="font-size: 12px;">End Date is required.</div>
         </div>
         </div>
 
@@ -249,14 +249,14 @@
       <div class="modal-body mx-3" style="display: flex; justify-content: space-between;">
         <div class="md-form mb-5">
           <i class="fas fa-user prefix grey-text"></i>
-          <input  type="text" style="width: 100%;" id="firstname" formControlName="firstname" name="firstname" placeholder="First Name" class="form-control validate" (focus)="showRequired('firstname')" (blur)="hideRequired('firstname')" required>
-          <div class="text-danger" *ngIf="showFirstNameRequired" style="font-size: 12px;">First Name is required.</div>
+          <input  type="text"  (focus)="showRequired('firstname')" (blur)="hideRequired('!firstname')" (input)="clearRequired('firstname')" style="width: 100%;" id="firstname" name="firstname" placeholder="First Name" class="form-control validate" required>
+          <div class="text-danger" *ngIf="requiredFields.firstname" style="font-size: 12px;">First Name is required.</div>
         </div>
 
         <div class="md-form mb-5">
           <i class="fas fa-user prefix grey-text"></i>
-          <input type="text" id="lastname" style="width: 100%;" name="lastname" placeholder="Last Name" class="form-control validate" (focus)="showRequired('lastname')" (blur)="hideRequired('lastname')" required>
-          <div class="text-danger" *ngIf="showLastNameRequired" id="lastname" style="font-size: 12px;">Last Name is required.</div>
+          <input type="text" id="lastname" (focus)="showRequired('lastname')" (blur)="hideRequired('!lastname')" (input)="clearRequired('lastname')" style="width: 100%;" name="lastname" placeholder="Last Name" class="form-control validate" required>
+          <div class="text-danger" *ngIf="requiredFields.lastname" id="lastname" style="font-size: 12px;">Last Name is required.</div>
         </div>
         </div>
 
@@ -264,34 +264,34 @@
         <div class="md-form mb-5">
           <i class="fas fa-venus-mars prefix grey-text"></i>
           <div class="custom-dropdown">
-            <select style="width:350%" id="gender" (focus)="showRequired('gender')" (blur)="hideRequired('gender')" name="gender" class="form-control" required>
+            <select style="width:350%"  id="gender" (focus)="showRequired('gender')" (blur)="hideRequired('!gender')" (input)="clearRequired('gender')"  name="gender" class="form-control" required>
               <option value="" disabled selected>Gender</option>
               <option value="male">Male</option>
               <option value="female">Female</option>
             </select>
           </div>
-          <div class="text-danger" id="gender" *ngIf="showGenderRequired" style="font-size: 12px;">Gender is required.</div>
+          <div class="text-danger" id="gender" *ngIf="requiredFields.gender" style="font-size: 12px;">Gender is required.</div>
         </div>
 
         <div class="md-form mb-5">
           <i class="fas fa-calendar-alt prefix grey-text" style="margin-left:-30%;"></i>
           <label for="dob">DOB:</label>
-          <input style="position: relative; margin-left: -30%;" type="date" id="dob" (focus)="showRequired('dob')" (blur)="hideRequired('dob')"  name="dob" placeholder="DOB" class="form-control validate" required>
-          <div class="text-danger" *ngIf="showDOBRequired" id="dob" style="font-size: 12px;">Date of Birth is required.</div>
+          <input style="position: relative; margin-left: -30%;"  (focus)="showRequired('dob')" (blur)="hideRequired('!dob')" (input)="clearRequired('dob')"  type="date" id="dob"   name="dob" placeholder="DOB" class="form-control validate" required>
+          <div class="text-danger" *ngIf="requiredFields.dob" id="dob" style="font-size: 12px;">Date of Birth is required.</div>
         </div>
         </div>
 
         <div class="modal-body mx-3" style="display: flex; justify-content: space-between;">
         <div class="md-form mb-5">
           <i class="fas fa-id-card prefix grey-text"></i>
-          <input type="text" id="rollno" (focus)="showRequired('rollno')" (blur)="hideRequired('rollno')" name="rollno" placeholder="Roll No" class="form-control validate" required>
-          <div class="text-danger" *ngIf="showRollNoRequired" id="rollno" style="font-size: 12px;">Roll No is required.</div>
+          <input type="text" id="rollno"  (focus)="showRequired('rollno')" (blur)="hideRequired('!rollno')" (input)="clearRequired('rollno')"  name="rollno" placeholder="Roll No" class="form-control validate" required>
+          <div class="text-danger" *ngIf="requiredFields.rollno" id="rollno" style="font-size: 12px;">Roll No is required.</div>
         </div>
 
         <div class="md-form mb-5">
           <i class="fas fa-map-marker-alt prefix grey-text"></i>
-          <input type="text" id="location" name="location" (focus)="showRequired('location')" (blur)="hideRequired('location')" placeholder="Location" class="form-control validate" required>
-          <div class="text-danger" *ngIf="showLocationRequired" id="location" style="font-size: 12px;">Location is required.</div>
+          <input type="text" id="location" (focus)="showRequired('location')" (blur)="hideRequired('!location')" (input)="clearRequired('location')" name="location" placeholder="Location" class="form-control validate" required>
+          <div class="text-danger" *ngIf="requiredFields.location" id="location" style="font-size: 12px;">Location is required.</div>
         </div>
       </div>
       <div class="modal-footer d-flex justify-content-center">

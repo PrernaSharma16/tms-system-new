@@ -9,113 +9,43 @@ import { Router } from '@angular/router';
 })
 export class TeacherViewComponent {
 
-  showFirstNameRequired: boolean = false; 
-  showLastNameRequired: boolean = false;
-  showGenderRequired: boolean = false;
-  showDOBRequired: boolean = false;
-  showRollNoRequired: boolean = false;
-  showLocationRequired: boolean = false;
+  requiredFields = {
+    firstname: false,
+    lastname: false,
+    gender: false,
+    dob: false,
+    rollno: false,
+    location: false,
+    courseid: false,
+    coursename: false,
+    coursedesc: false,
+    trainername: false,
+    softwarereq: false,
+    startdate: false,
+    enddate: false,
+  };
 
-  showRequired(fieldName: any) {
-    if (fieldName === 'firstname' && !this[fieldName]) {
-      this.showFirstNameRequired = true;
-    }
 
-    if (fieldName === 'lastname' && !this[fieldName]) {
-      this.showLastNameRequired = true;
-    }
-
-    if (fieldName === 'gender' && !this[fieldName]) {
-      this.showGenderRequired = true;
-    }
-
-    if (fieldName === 'dob' && !this[fieldName]) {
-      this.showDOBRequired = true;
-    }
-
-    if (fieldName === 'rollno' && !this[fieldName]) {
-      this.showRollNoRequired = true;
-    }
-
-    if (fieldName === 'location' && !this[fieldName]) {
-      this.showLocationRequired = true;
-    }
-  }
-
-  hideRequired(fieldName: any) {
-    if (fieldName === 'firstname' && !this[fieldName]) {
-      this.showFirstNameRequired = false;
-    }
-
-    if (fieldName === 'lastname' && !this[fieldName]) {
-      this.showLastNameRequired = false;
-    }
-
-    if (fieldName === 'gender') {
-      this.showGenderRequired = false;
-    }
-
-    if (fieldName === 'dob') {
-      this.showDOBRequired = false;
-    }
-
-    if (fieldName === 'rollno') {
-      this.showRollNoRequired = false;
-    }
-
-    if (fieldName === 'location') {
-      this.showLocationRequired = false;
+  showRequired(fieldName: string) {
+    if (!this[fieldName]) {
+      this.requiredFields[fieldName] = true;
     }
   }
   
-
-
- showCourseIdRequired: boolean = false;
- showCourseNameRequired: boolean = false;
- showCourseDescRequired: boolean = false;
- showTrainerNameRequired: boolean = false;
- showSoftwareReqRequired: boolean = false;
- showStartDateRequired: boolean = false;
- showEndDateRequired: boolean = false;
-
- Required(fieldName:any)
- {
-    if(fieldName === 'courseid'  && !this[fieldName])
-    {
-      this.showCourseIdRequired = true;
+  hideRequired(fieldName: string) {
+    if (!this[fieldName]) {
+      this.requiredFields[fieldName] = false;
     }
-
-    if(fieldName === 'coursename'  && !this[fieldName])
-    {
-      this.showCourseNameRequired = true;
+  }
+  
+  clearRequired(fieldName: any) {
+    if (!this[fieldName]) {
+      this.requiredFields[fieldName] = false;
+    } else {
+      this.requiredFields[fieldName] = true;
     }
+  }
 
-    if(fieldName === 'coursedesc'  && !this[fieldName])
-    {
-      this.showCourseDescRequired = true;
-    }
-
-    if(fieldName === 'trainername'  && !this[fieldName])
-    {
-      this.showTrainerNameRequired = true;
-    }
-
-    if(fieldName === 'softwarereq'  && !this[fieldName])
-    {
-      this.showSoftwareReqRequired = true;
-    }
-
-    if(fieldName === 'startdate'  && !this[fieldName])
-    {
-      this.showStartDateRequired = true;
-    }
-
-    if(fieldName === 'enddate'  && !this[fieldName])
-    {
-      this.showEndDateRequired = true;
-    }
-
- }
 
   isEditing: boolean = false;
   editedFirstName: string;

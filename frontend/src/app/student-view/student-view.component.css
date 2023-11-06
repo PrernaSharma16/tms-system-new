@@ -151,3 +151,14 @@
     height: 77%; /* Reset the height to its default value */
   }
 }
+
+.container{
+
+  height: 66%;
+  margin-top: 7.5%;
+}
+
+
+/* .btn {
+  padding: .55rem 1.5rem .45rem;
+} */
