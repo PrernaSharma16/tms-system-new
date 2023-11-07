@@ -37,7 +37,7 @@ public class StudentService {
     }
 
     public Map<String, Object> insertStudent(StudentView studentView){
-        String sql = "insert into student values(?,?,?,?,?,?,?)";
+        String sql = "insert into student values(?,?,?,?,?,?)";
         int result = jdbcTemplate.update(sql,
         studentView.getFirstname(),
         studentView.getLastname(),

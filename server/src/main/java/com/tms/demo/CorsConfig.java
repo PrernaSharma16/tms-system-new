@@ -28,6 +28,21 @@ public class CorsConfig {
                         .allowedOrigins("http://localhost:4200")
                         .allowedMethods("GET")
                         .allowCredentials(true);
+                
+                registry.addMapping("/getStudent") 
+                        .allowedOrigins("http://localhost:4200")
+                        .allowedMethods("GET")
+                        .allowCredentials(true);
+
+                registry.addMapping("/insertCourse") 
+                        .allowedOrigins("http://localhost:4200")
+                        .allowedMethods("POST")
+                        .allowCredentials(true);
+
+                registry.addMapping("/insertStudent") 
+                        .allowedOrigins("http://localhost:4200")
+                        .allowedMethods("POST")
+                        .allowCredentials(true);
             }
         };
     }

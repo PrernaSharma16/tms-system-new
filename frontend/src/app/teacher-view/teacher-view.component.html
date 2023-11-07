@@ -33,12 +33,12 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td *ngIf="!isEditing">Yash</td>
+          <tr *ngFor="let student of students">
+            <td *ngIf="!isEditing">{{student.firstname}}</td>
             <td *ngIf="isEditing"><input type="text" style="width: 60%;" [(ngModel)]="editedFirstName"></td>
-            <td *ngIf="!isEditing">male</td>
+            <td *ngIf="!isEditing">{{student.gender}}</td>
             <td *ngIf="isEditing"><input type="text" style="width: 60%;" [(ngModel)]="editedGender"></td>
-            <td *ngIf="!isEditing">date</td>
+            <td *ngIf="!isEditing">{{student.dob}}</td>
             <td *ngIf="isEditing"><input type="text" style="width: 60%;" [(ngModel)]="editedDOB"></td>
             <td>
               <div *ngIf="!isEditing">
@@ -55,12 +55,12 @@
               </div>
             </td>
           </tr>
-          <tr>
-            <td *ngIf="!isEditing">Yash</td>
+           <!-- <tr>
+            <td *ngIf="!isEditing"></td>
             <td *ngIf="isEditing"><input type="text" style="width: 60%;" [(ngModel)]="editedFirstName"></td>
-            <td *ngIf="!isEditing">male</td>
+            <td *ngIf="!isEditing"></td>
             <td *ngIf="isEditing"><input type="text" style="width: 60%" [(ngModel)]="editedGender"></td>
-            <td *ngIf="!isEditing">date</td>
+            <td *ngIf="!isEditing"></td>
             <td *ngIf="isEditing"><input type="text" style="width: 60%" [(ngModel)]="editedDOB"></td>
             <td>
               <div *ngIf="!isEditing">
@@ -76,7 +76,7 @@
                 <i class="fa fa-times times-icon" style="color: red" (click)="cancelEdit()"></i>
               </div>
             </td>
-          </tr>
+          </tr>  -->
           
         </tbody>
       </table>
@@ -99,16 +99,16 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td *ngIf="!isEdit">Course</td>
+          <tr *ngFor="let course of courses">
+            <td *ngIf="!isEdit">{{course.course_name}}</td>
             <td *ngIf="isEdit">
               <input type="text" style="width: 70px;" [(ngModel)]="editCourseName">
             </td>
-            <td *ngIf="!isEdit">2023-01-01</td>
+            <td *ngIf="!isEdit">{{course.start_date}}</td>
             <td *ngIf="isEdit">
               <input type="date" style="width: 70px;" [(ngModel)]="editStartDate">
             </td>
-            <td *ngIf="!isEdit">2023-12-31</td>
+            <td *ngIf="!isEdit">{{course.end_date}}</td>
             <td *ngIf="isEdit">
               <input type="date" style="width: 70px;" [(ngModel)]="editEndDate">
             </td>
@@ -127,16 +127,16 @@
               </div>
             </td>
           </tr>
-          <tr>
-            <td *ngIf="!isEdit">Course</td>
+          <!-- <tr>
+            <td *ngIf="!isEdit"></td>
             <td *ngIf="isEdit">
               <input type="text" style="width: 70px;" [(ngModel)]="editCourseName">
             </td>
-            <td *ngIf="!isEdit">2023-01-01</td>
+            <td *ngIf="!isEdit"></td>
             <td *ngIf="isEdit">
               <input type="date" style="width: 70px;" [(ngModel)]="editStartDate">
             </td>
-            <td *ngIf="!isEdit">2023-12-31</td>
+            <td *ngIf="!isEdit"></td>
             <td *ngIf="isEdit">
               <input type="date" style="width: 70px;" [(ngModel)]="editEndDate">
             </td>
@@ -154,7 +154,7 @@
                 <i class="fa fa-times" style="color: red" (click)="cancel()"></i>
               </div>
             </td>
-          </tr>
+          </tr> -->
           
         </tbody>
       </table>
@@ -186,6 +186,7 @@
           <input style="position: relative;" type="text" id="coursename" placeholder="Course Name" (focus)="Required('coursename')" (blur)="hideRequired('coursename')" class="form-control">
           <div class="text-danger" *ngIf="showCourseNameRequired" id="coursename" style="font-size: 12px;">Course Name is required.</div>
         </div>
+        
 
         <div class="md-form mb-5">
           <i class="fas fa-tag prefix grey-text"></i>
@@ -216,11 +217,11 @@
           <i class="fas fa-calendar-alt prefix grey-text"></i>
           <label for="enddate">End Date:</label>
           <input style="position: relative;" type="date" id="enddate" (focus)="Required('enddate')" (blur)="hideRequired('enddate')" placeholder="End Date" class="form-control">
-          <div class="text-danger" *ngIf="showEndDateRequired" id="startdate" style="font-size: 12px;">End Date is required.</div>
+          <div class="text-danger" *ngIf="showEndDateRequired" id="enddate" style="font-size: 12px;">End Date is required.</div>
         </div>
       </div>
       <div class="modal-footer d-flex justify-content-center">
-        <button  class="btn btn-success">Add Course <i class="fas fa-user-plus ml-1"></i></button>
+        <button  class="btn btn-success" (click)="insertCourse()">Add Course <i class="fas fa-user-plus ml-1"></i></button>
       </div>
     </div>
   </div>
@@ -280,7 +281,7 @@
         </div>
       </div>
       <div class="modal-footer d-flex justify-content-center">
-        <button style="position: relative;" type="submit" class="btn btn-success">Add Student <i class="fas fa-user-plus ml-1"></i></button>
+        <button style="position: relative;" type="submit" class="btn btn-success" (click)="insertStudent()">Add Student <i class="fas fa-user-plus ml-1"></i></button>
       </div>
     </div>
   </div>

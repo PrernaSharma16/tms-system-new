@@ -32,6 +32,11 @@ export class LoginBodyComponent implements OnInit{
     this.isLoading = true;
 
     const user = this.loginForm.value;
+    
+    const loadingContainer = document.getElementById('loadingContainer');
+    if (loadingContainer) {
+      loadingContainer.style.display = 'block';
+    }
     this.http.post<any>('http://localhost:8080/login', user).subscribe(
       response => {
         if(response.token){
@@ -56,10 +61,16 @@ export class LoginBodyComponent implements OnInit{
         }
 
         this.isLoading = false;
+        if (loadingContainer) {
+          loadingContainer.style.display = 'none';
+        }
       },
       error => {
         alert('An error occurred while processing your request');
         this.isLoading = false;
+        if (loadingContainer){
+          loadingContainer.style.display = 'none';
+        }
       }
     );
   }

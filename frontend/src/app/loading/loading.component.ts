@@ -13,7 +13,7 @@ export class LoadingComponent implements OnInit {
         if (loadingContainer) {
           loadingContainer.style.display = 'block';
         }
-      }, 7000);
+      }, 50000);
   }
 
 }
