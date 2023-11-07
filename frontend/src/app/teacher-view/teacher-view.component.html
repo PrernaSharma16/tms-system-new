@@ -1,8 +1,17 @@
-<mat-toolbar color="primary" class="other-navbar" style="width: 100%;">
-  <span style="margin-left: 43%;  width:100%; font-size: 130%;">MINDCRAFT</span>
+<nav class="navbar" style="background-color: blue;">
 
-  <i class='far fa-user-circle' data-bs-toggle="modal" data-bs-target="#example2" style='font-size:200%;color:white'></i>
-</mat-toolbar>
+  <div class="container-fluid">
+  
+    <a class="navbar-brand" style="margin-left: 45%; font-size: 200%; color: white;">Mindcraft</a>
+
+   <div>
+   <i class="far fa-user-circle fa-lg mb-1" style="position: relative; font-size: 200%; color: white;" data-bs-toggle="modal" data-bs-target="#example2"></i>
+  </div>
+
+    
+  </div>
+</nav>
+
 
 
 
@@ -215,7 +224,7 @@
         <div class="md-form mb-5">
           <i class="fas fa-calendar-alt prefix grey-text" style="margin-left:-25%"></i>
           <label for="startdate">Start Date:</label>
-          <input type="date" style="margin-left:-25%" placeholder="Start Date"  id="startdatestartdate" class="form-control">
+          <input type="date" style="margin-left:-25%; width: 126%;" placeholder="Start Date"  id="startdatestartdate" class="form-control">
           <div class="text-danger" *ngIf="requiredFields.startdate" id="startdate" style="font-size: 12px;">Software Req is required.</div>
         </div>
         </div>
@@ -225,7 +234,7 @@
         <div class="md-form mb-5">
           <i class="fas fa-calendar-alt prefix grey-text"></i>
           <label for="enddate">End Date:</label>
-          <input type="date" id="enddate" placeholder="End Date" class="form-control">
+          <input type="date" style="width: 126%;" id="enddate" placeholder="End Date" class="form-control">
           <div class="text-danger" *ngIf="requiredFields.enddate" id="startdate" style="font-size: 12px;">End Date is required.</div>
         </div>
         </div>
@@ -237,7 +246,7 @@
   </div>
 </div>
 
-<div class="modal fade" id="example3" data-bs-backdrop="false">
+<div class="modal" id="example3" data-bs-backdrop="false">
   
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -264,7 +273,7 @@
         <div class="md-form mb-5">
           <i class="fas fa-venus-mars prefix grey-text"></i>
           <div class="custom-dropdown">
-            <select style="width:350%"  id="gender" (focus)="showRequired('gender')" (blur)="hideRequired('!gender')" (input)="clearRequired('gender')"  name="gender" class="form-control" required>
+            <select style="width:270%"  id="gender" (focus)="showRequired('gender')" (blur)="hideRequired('!gender')" (input)="clearRequired('gender')"  name="gender" class="form-control" required>
               <option value="" disabled selected>Gender</option>
               <option value="male">Male</option>
               <option value="female">Female</option>
@@ -274,9 +283,9 @@
         </div>
 
         <div class="md-form mb-5">
-          <i class="fas fa-calendar-alt prefix grey-text" style="margin-left:-30%;"></i>
+          <i class="fas fa-calendar-alt prefix grey-text" style="margin-left:-25%;"></i>
           <label for="dob">DOB:</label>
-          <input style="position: relative; margin-left: -30%;"  (focus)="showRequired('dob')" (blur)="hideRequired('!dob')" (input)="clearRequired('dob')"  type="date" id="dob"   name="dob" placeholder="DOB" class="form-control validate" required>
+          <input style="position: relative; margin-left: -25%; width:124%"  (focus)="showRequired('dob')" (blur)="hideRequired('!dob')" (input)="clearRequired('dob')"  type="date" id="dob"   name="dob" placeholder="DOB" class="form-control validate" required>
           <div class="text-danger" *ngIf="requiredFields.dob" id="dob" style="font-size: 12px;">Date of Birth is required.</div>
         </div>
         </div>
@@ -293,7 +302,20 @@
           <input type="text" id="location" (focus)="showRequired('location')" (blur)="hideRequired('!location')" (input)="clearRequired('location')" name="location" placeholder="Location" class="form-control validate" required>
           <div class="text-danger" *ngIf="requiredFields.location" id="location" style="font-size: 12px;">Location is required.</div>
         </div>
-      </div>
+        </div>
+
+        <div class="modal-body mx-3" style="display: flex; justify-content: space-between;">
+          <div class="md-form mb-5">
+            <i class="fas fa-id-card prefix grey-text"></i>
+            <input type="text" id="roll"  (focus)="showRequired('roll')" (blur)="hideRequired('!roll')" (input)="clearRequired('roll')"  name="roll" placeholder="Roll " class="form-control validate" required>
+            <div class="text-danger" *ngIf="requiredFields.rollno" id="rollno" style="font-size: 12px;">Roll  is required.</div>
+          </div>
+          </div>
+        
+
+
+
+     
       <div class="modal-footer d-flex justify-content-center">
         <button type="submit" class="btn btn-success">Add Student <i class="fas fa-user-plus ml-1"></i></button>
       </div>
@@ -449,6 +471,14 @@
 
 
 
-<mat-toolbar color="primary" class="other-navbar" style="width: 100%;">
-  <span style="margin-left: 34%;  width:100%; font-size: 130%;">mindcraft.in | All rights reserved</span>
-</mat-toolbar>
+
+<nav class="navbar" style="background-color: blue;">
+
+  <div class="container-fluid">
+  
+    <a class="navbar-brand" style="margin-left: 36%; font-size: 200%; color: white;">mindcraft.in | All rights reserved
+    </a>
+
+    
+  </div>
+</nav>

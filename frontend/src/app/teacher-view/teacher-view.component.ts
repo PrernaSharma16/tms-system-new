@@ -23,6 +23,7 @@ export class TeacherViewComponent {
     softwarereq: false,
     startdate: false,
     enddate: false,
+    roll: false
   };
 
 
