@@ -51,6 +51,7 @@ public class CourseController {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(response);
         }
     }
+    
     @RequestMapping(value = "/updateCourse/{course_id}", method = RequestMethod.PUT)
     public ResponseEntity<Map<String, Object>> updateCourse(@PathVariable int course_id, @RequestBody CourseView courseView) {
         Map<String, Object> response = (Map<String, Object>) courseService.updateCourse(course_id, courseView);
@@ -61,6 +62,7 @@ public class CourseController {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(response);
         }
     }
+
     @RequestMapping(value = "/deleteCourse/{course_id}", method = RequestMethod.DELETE)
     public ResponseEntity<Map<String, Object>> deleteCourse(@PathVariable int course_id) {
         Map<String, Object> response = (Map<String, Object>) courseService.deleteCourse(course_id);

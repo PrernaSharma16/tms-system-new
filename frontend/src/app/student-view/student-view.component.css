@@ -37,117 +37,15 @@
 }
 
 
-@media (max-width: 768px) {
-  .table-card {
-    width: 95%; /* Adjust width for smaller screens */
-    margin-left: 2.5%; /* Center-align the card */
-  }
-}
 
-/* Responsive styles for 992px and below (e.g., tablets) */
-@media (max-width: 992px) {
-  .table-card {
-    width: 90%; /* Adjust width for medium-sized screens */
-    margin-left: 5%; /* Center-align the card */
-  }
-}
 
-/* Responsive styles for 576px and below (e.g., smaller devices) */
-@media (max-width: 576px) {
-  .table-card {
-    width: 85%; /* Adjust width for smaller screens */
-    margin-left: 7.5%; /* Center-align the card */
-  }
+.container{
+
+  height: 66%;
+  margin-top: 8.7%;
 }
 
 
-@media (max-width: 576px) {
-  .other-navbar {
-    font-size: 18px; /* Adjust font size for smaller screens */
-    padding: 15px; /* Adjust padding for smaller screens */
-  }
-}
-
-/* Responsive styles for screens between 576px and 768px (e.g., larger smartphones) */
-@media (min-width: 576px) and (max-width: 768px) {
-  .other-navbar {
-    font-size: 20px; /* Adjust font size for medium-sized screens */
-    padding: 20px; /* Adjust padding for medium-sized screens */
-  }
-}
-
-/* Responsive styles for screens between 768px and 992px (e.g., tablets) */
-@media (min-width: 768px) and (max-width: 992px) {
-  .other-navbar {
-    font-size: 22px; /* Adjust font size for medium-sized screens */
-    padding: 20px; /* Adjust padding for medium-sized screens */
-  }
-}
-
-/* Responsive styles for screens larger than 992px (e.g., desktops) */
-@media (min-width: 992px) {
-  .other-navbar {
-    font-size: 24px; /* Keep the default font size for larger screens */
-    padding: 25px; /* Keep the default padding for larger screens */
-  }
-}
-
-
-@media (max-width: 576px) {
-  .table-card {
-    width: 95%; /* Adjust the width for smaller screens */
-    margin-left: 2.5%; /* Center-align the card */
-  }
-}
-
-/* Responsive styles for screens between 576px and 768px (e.g., larger smartphones) */
-@media (min-width: 576px) and (max-width: 768px) {
-  .table-card {
-    width: 90%; /* Adjust the width for medium-sized screens */
-    margin-left: 5%; /* Center-align the card */
-  }
-}
-
-/* Responsive styles for screens between 768px and 992px (e.g., tablets) */
-@media (min-width: 768px) and (max-width: 992px) {
-  .table-card {
-    width: 85%; /* Adjust the width for medium-sized screens */
-    margin-left: 7.5%; /* Center-align the card */
-  }
-}
-
-/* Responsive styles for screens larger than 992px (e.g., desktops) */
-@media (min-width: 992px) {
-  .table-card {
-    width: 80%; /* Maintain the default width for larger screens */
-    margin-left: 10%; /* Maintain the default margin for larger screens */
-  }
-}
-
-
-@media (max-width: 576px) {
-  .table-container {
-    height: auto; /* Allow the table to take the available height */
-  }
-}
-
-/* Responsive styles for screens between 576px and 768px (e.g., larger smartphones) */
-@media (min-width: 576px) and (max-width: 768px) {
-  .table-container {
-    height: auto; /* Allow the table to take the available height */
-  }
-}
-
-/* Responsive styles for screens between 768px and 992px (e.g., tablets) */
-@media (min-width: 768px) and (max-width: 992px) {
-  .table-container {
-    height: auto; /* Allow the table to take the available height */
-  }
-}
-
-/* Responsive styles for screens larger than 992px (e.g., desktops) */
-@media (min-width: 992px) {
-  .table-container {
-    height: 77%; /* Reset the height to its default value */
-  }
-}
+/* .btn {
+  padding: .55rem 1.5rem .45rem;
+} */

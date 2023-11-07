@@ -2,6 +2,13 @@
   background: white;
 }
 
+.md-form mb-5
+{
+  display:flex;
+  justify-content: space-between;
+  position: relative;
+}
+
 .container1 {
   background-color: white;
   height: 60%;
@@ -93,19 +100,15 @@
 }
 
 /* Modal styles */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  max-height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.7);
-  
-}
+
+
+
+
+
+
+
+
+
 
 .custom-dropdown select {
   background-color: transparent; /* Make the background transparent */
@@ -134,20 +137,21 @@
 
 /* Adjust the font size and padding for form elements as needed */
 .md-form .form-group label {
-  font-size: 14px;
-  margin-bottom: 5px;
+  font-size: 17px;
+  margin-bottom: 7px;
   position: relative;
 }
 
 .md-form .form-control {
-  padding: 10px;
-  font-size: 14px;
+  padding: 12px;
+  font-size: 16px;
   position: relative;
 }
 
 .text-danger {
-  font-size: 12px; /* Set the font size for text-danger messages */
+  font-size: 16px; /* Set the font size for text-danger messages */
   margin-bottom: 0; /* Remove the margin at the bottom of text-danger messages */
+  position: absolute;
 }
 
 /* Media query for screens smaller than 480px (e.g., smartphones) */
@@ -229,39 +233,4 @@
 /* Large screens (e.g., desktops) - You can add specific styles for larger screens if needed */
 
 /* Media query for screens smaller than 768px (e.g., smartphones) */
-@media (max-width: 768px) {
-  .modal form {
-    width: 90%; /* Adjust the width for smaller screens */
-    max-width: 90%;
-    margin: 0;
-  }
 
-  .modal .modal-content {
-    max-width: 100%; /* Adjust the maximum width as needed */
-    margin: 0;
-  }
-
-  .modal .form-group {
-    flex: 0 0 100%; /* Make the form groups take up the full width */
-  }
-
-  .modal .modal-footer {
-    text-align: center; /* Center-align the footer content */
-  }
-
-  .modal .modal-header .modal-title {
-    font-size: 18px; /* Adjust the font size for the title */
-  }
-
-  .modal .modal-body .md-form input {
-    width: 100%; /* Make the input fields take up the full width */
-  }
-
-  .modal .modal-body .md-form label {
-    text-align: left; /* Left-align the labels */
-  }
-
-  .modal .modal-body .text-danger {
-    font-size: 12px; /* Adjust the font size for error messages */
-  }
-}
